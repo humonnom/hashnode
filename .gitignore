@@ -28,6 +28,7 @@ yarn-error.log*
 
 # local env files
 packages/blog-starter-kit/themes/.env.local
+packages/blog-starter-kit/themes/personal/.env.local
 !.env.example
 
 # vercel
