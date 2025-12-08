@@ -1,0 +1,171 @@
+{
+  "personal": {
+    "name": "Jueun Park",
+    "nameKo": "박주은",
+    "title": "Frontend Developer",
+    "email": "juepark42@gmail.com",
+    "phone": "+8210 9599 6425",
+    "intro": "안녕하세요. 지식을 나누는 개발자 박주은입니다.",
+    "description": "\"오늘 제가 받은 멘토링은 정말 제가 받고 싶어했던 멘토링 그 자체였습니다.\"\n\n위 내용은 최근에 받은 멘토링 후기입니다. 저는 중등교 자격증을 가지고 있을 정도로 교육에 관심이 많습니다. 슬고, 인프런 등의 플랫폼에서 활동하고 있으며 다른 사람의 문제를 해결해줄 수 있다는 점 때문에 교육 분야에 매력을 느낍니다."
+  },
+  "links": {
+    "github": "https://github.com/humonnom",
+    "blog": "https://humonnom.ghost.io",
+    "linkedin": "https://www.linkedin.com/in/juepark"
+  },
+  "employment": [
+    {
+      "id": "codeit",
+      "company": "코드잇",
+      "companyEn": "Codeit",
+      "position": "Lead Instructor",
+      "type": "프리랜서, 기수 단위 계약",
+      "period": "2024.06 - 2024.11",
+      "responsibilities": [
+        {
+          "category": "교안 제작 및 강의",
+          "items": [
+            "재학 기수: 프론트엔드 단기 심화과정 2기, 4기",
+            "코드잇 측에서 제공한 필수 내용 및 가이드 토대로 교안 및 스크립트 작성",
+            "수준별 실습으로 단양한 수준의 수강생이 함께 학습할 수 있도록 함",
+            "첫번째 단위기간 기준 총 수료 인원 15명, 이전 기수와 비교하여 7명 증가(87.5% 증가)",
+            "주마다 사정보는 강의명가를 기반으로 수강생 요구사항 적극 수용(수강생 평가 5.74/6점 만점)"
+          ]
+        },
+        {
+          "category": "이론 강의 교육",
+          "items": [
+            "React 생태계의 CSS 프레임워크(실습은 주로 Tailwind)",
+            "애니메이션의 종류와 주요 라이브러리(Framer motion, React spring 실습)",
+            "프론트엔드 테스팅(Jest, react-testing-library)",
+            "DevOps와 CI/CD파이프라인(Github Action 실습)"
+          ]
+        },
+        {
+          "category": "테스트 진행",
+          "items": ["온라인 필기 시험 감독 및 채점", "사전과제 대비 모의 과제 출제 / 코드리뷰"]
+        },
+        {
+          "category": "프로젝트 진행상황 체크 및 평가",
+          "items": ["프로젝트 단계에 맞는 멘토링 제공", "프로젝트 결과물 피드백"]
+        },
+        {
+          "category": "출결 및 수강생 관리",
+          "items": ["신청자 대상 보충학습 진행(매주 토요일)"]
+        }
+      ]
+    },
+    {
+      "id": "artue",
+      "company": "주식회사아트루소시에이티",
+      "companyEn": "Artue",
+      "website": "https://artue.io/",
+      "position": "Frontend Developer",
+      "period": "2023.10 - 2024.05",
+      "responsibilities": [
+        {
+          "category": "아튜 | Artue (스토어/아트민/앱) 개발",
+          "items": []
+        },
+        {
+          "category": "레거시 코드 개선을 위한 적극적인 코드 리뷰 및 개선사항 제안",
+          "items": []
+        },
+        {
+          "category": "스토어 주요업무",
+          "items": [
+            "컨텐츠 다국어 적용(ko/en) 및 언어변경시 부드러운 전환을 위한 UI처리",
+            "트래킹 적정(GA4, Amplitude, Meta Pixel)",
+            "기존 커스텀 스켈레톤 대신 Next.js placeholder 활용하여 부드러운 화면처리",
+            "Next.js Middleware를 활용한 레거시 URL대응"
+          ]
+        },
+        {
+          "category": "웹사이트 성능 개선",
+          "items": ["페기지 최적화로 빌드 시간 30%단축"]
+        },
+        {
+          "category": "서버사이드 렌더링",
+          "items": ["서버사이드 렌더링 개선"]
+        },
+        {
+          "category": "코드로드시정 최적화",
+          "items": ["일부 컴포넌트 코드를 불필요한 시점에 호출함", "사용하는 시점에 호출함"]
+        }
+      ],
+      "stack": ["Material UI", "emotion", "Zustand", "React Query", "React Hook Form"]
+    },
+    {
+      "id": "luaeb",
+      "company": "뉴스랜드도앤엠씨",
+      "companyEn": "LUAEB",
+      "website": "https://luaeb.com/",
+      "position": "Software Engineer",
+      "period": "2022.07 - 2023.08",
+      "responsibilities": [
+        {
+          "category": "루엠 | LUAEB (스토어/아트민/앱 개발)",
+          "items": []
+        },
+        {
+          "category": "스토어 주요업무",
+          "items": [
+            "MVC(Model-View-Controller) 기반의 React 프레임워크 이용함",
+            "MAU 5k와 소량 물맛을 제작 및 유지보수",
+            "모바일, 태블릿 반응형 제작",
+            "채팅룸, Sentry, Amplitude 등의 도구를 활용하여 사용자의 요구사항을 빠른 추기로 반영",
+            "i18n 기반 다국어 적용(ko/en)"
+          ]
+        },
+        {
+          "category": "어드민 주요업무",
+          "items": ["300여개 브랜드가 이용하는 어드민 개발 및 유지보수"]
+        },
+        {
+          "category": "앱 주요업무",
+          "items": ["React Native를 활용하여 웃물 기능이 있는 앱 제작"]
+        },
+        {
+          "category": "백엔드 환경 이관",
+          "items": [
+            "기존 백엔드 환경에서 NHN의 Shop by 솔루션으로 이관",
+            "유틸 그대로 유지하면서 기존 API에서 솔루션 API로 변경하는 작업"
+          ]
+        },
+        {
+          "category": "Node.js / AWS S3 활용하여 네이버/메타 광고에 루엠의 전 상품 노출",
+          "items": ["백엔드 환경 이관후 매출 모멘텀이 꺼이지 않도록 기여"]
+        }
+      ],
+      "stack": ["Chakra UI", "Material UI", "Tamagui", "Zustand", "React Query", "Formik"]
+    }
+  ],
+  "education": [
+    {
+      "school": "Ecole 42",
+      "schoolKo": "에콜 42",
+      "degree": "Computer Science School 컴퓨터 공학 스쿨",
+      "major": "자료구조, 알고리즘, 네트워크, 데이터베이스, 그래픽 등 기본적인 CS이론 학습",
+      "period": "2020.07 - 2022.07"
+    },
+    {
+      "school": "Hongik University",
+      "schoolKo": "홍익대학교",
+      "degree": "Sculpture / 미술교과 교직 이수",
+      "period": "2013.03 - 2018.08"
+    }
+  ],
+  "skills": {
+    "primary": ["React", "TypeScript", "Next.js"],
+    "additional": ["GraphQL", "Restful API", "Github", "Webstorm", "Vim"]
+  },
+  "languages": [
+    {
+      "language": "Japanese",
+      "languageKo": "일본어",
+      "level": "Conversational",
+      "certification": "JLPT N2 (2024.01.11 취득)"
+    }
+  ],
+  "interests": ["이력서 회식(2024년 20회)", "프론트엔드 프로그래밍 레슨", "교육 관련 논문 읽기"]
+}

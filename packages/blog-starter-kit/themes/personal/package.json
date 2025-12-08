@@ -22,6 +22,8 @@
 		"gray-matter": "^4.0.3",
 		"html-react-parser": "^4.2.2",
 		"js-cookie": "^3.0.5",
+		"lucide-react": "^0.556.0",
+		"motion": "^12.23.25",
 		"next-themes": "^0.3.0",
 		"react-waypoint": "^10.3.0",
 		"remark": "^14.0.2",
@@ -46,5 +48,5 @@
 		"eslint": "^8.51.0",
 		"postcss": "^8.4.14"
 	},
-  "packageManager": "pnpm@8.15.0"
+	"packageManager": "pnpm@8.15.0"
 }
