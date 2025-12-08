@@ -6,38 +6,109 @@
     "email": "juepark42@gmail.com",
     "phone": "+8210 9599 6425",
     "intro": "안녕하세요. 지식을 나누는 개발자 박주은입니다.",
-    "description": "\"오늘 제가 받은 멘토링은 정말 제가 받고 싶어했던 멘토링 그 자체였습니다.\"\n\n위 내용은 최근에 받은 멘토링 후기입니다. 저는 중등교 자격증을 가지고 있을 정도로 교육에 관심이 많습니다. 슬고, 인프런 등의 플랫폼에서 활동하고 있으며 다른 사람의 문제를 해결해줄 수 있다는 점 때문에 교육 분야에 매력을 느낍니다."
+    "description": "\"오늘 제가 받은 멘토링은 정말 제가 받고 싶어했던 멘토링 그 자체였습니다.\"\n\n위 내용은 인프런에서 멘토링 후 받은 후기입니다. 숨고, 인프런 그리고 코드잇에서 저를 거쳐간 수강생은 80명이 넘습니다. 다른 사람의 문제를 해결해줄 수 있다는 점 때문에 교육 분야에 매력을 느낍니다."
   },
   "links": {
     "github": "https://github.com/humonnom",
-    "blog": "https://humonnom.ghost.io",
+    "blog": "https://humonnom.vercel.app/",
     "linkedin": "https://www.linkedin.com/in/juepark"
   },
   "employment": [
     {
-      "id": "codeit",
+      "id": "codeit-fe",
       "company": "코드잇",
       "companyEn": "Codeit",
-      "position": "Lead Instructor",
-      "type": "프리랜서, 기수 단위 계약",
-      "period": "2024.06 - 2024.11",
+      "position": "Lead Instructor | 주강사",
+      "type": "프리랜서",
+      "period": "2025.10 - Present",
       "responsibilities": [
         {
-          "category": "교안 제작 및 강의",
+          "category": "담당 과정 설명",
           "items": [
-            "재학 기수: 프론트엔드 단기 심화과정 2기, 4기",
-            "코드잇 측에서 제공한 필수 내용 및 가이드 토대로 교안 및 스크립트 작성",
-            "수준별 실습으로 단양한 수준의 수강생이 함께 학습할 수 있도록 함",
-            "첫번째 단위기간 기준 총 수료 인원 15명, 이전 기수와 비교하여 7명 증가(87.5% 증가)",
-            "주마다 사정보는 강의명가를 기반으로 수강생 요구사항 적극 수용(수강생 평가 5.74/6점 만점)"
+            "프론트엔드 엔지니어 과정 (26주 과정, 1248 시간)",
+            "- 21기 : 2025.10.16 - 2026.04.10",
+            "- 코드잇에서 제공한 학습 영상/코드 실습을 기반으로 수강생 자율 학습",
+            "- 과목이 끝날 때마다 과제가 주어지고, 수강생이 코드를 작성하여 git으로 제출",
+            "- 팀 프로젝트 진행"
           ]
         },
         {
-          "category": "이론 강의 교육",
+          "category": "업무 범위",
           "items": [
-            "React 생태계의 CSS 프레임워크(실습은 주로 Tailwind)",
-            "애니메이션의 종류와 주요 라이브러리(Framer motion, React spring 실습)",
-            "프론트엔드 테스팅(Jest, react-testing-library)",
+            "코드 리뷰",
+            "- 스프린트 미션(1~12)이 주어지고, 수강생이 제출한 코드를 리뷰",
+            "- 2025.12.8 현재 누적 66회 진행",
+            "질의 응답",
+            "- 수강생이 수업 내용 및 과제에 대해 질문하면 답변 제공",
+            "- 주중 매일 9시부터 19시까지 온라인 상주",
+            "- Discord/Zoom 활용하여 실시간 대응"
+          ]
+        },
+        {
+          "category": "프로젝트 진행상황 체크 및 평가",
+          "items": ["프로젝트 단계에 맞는 멘토링 제공", "프로젝트 결과물 피드백"]
+        }
+      ],
+      "stack": [
+            "HTML/CSS",
+            "Git/GitHub",
+            "Unix 명령어",
+            "JavaScript",
+            "React",
+            "TypeScript",
+            "Next.js"
+          ]
+    },
+    {
+      "id": "codeit-mentor",
+      "company": "코드잇",
+      "companyEn": "Codeit",
+      "position": "Mentor | 멘토",
+      "type": "프리랜서",
+      "period": "2025.04 - 2025.06",
+      "responsibilities": [
+        {
+          "category": "담당 과정(멘토)",
+          "items": [
+            "프론트엔드 단기 심화과정(10주 동안 주 1-2회)",
+            "- 9기 : 2025.04.24 - 2025.06.24"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "codeit",
+      "company": "코드잇",
+      "companyEn": "Codeit",
+      "position": "Lead Instructor | 주강사",
+      "type": "프리랜서",
+      "period": "2024.06 - 2025.04",
+      "responsibilities": [
+        {
+          "category": "담당 과정",
+          "items": [
+            "프론트엔드 단기 심화과정 (10주 과정, 349 시간)",
+            "- 강의 자료 제작 : 2024.06.20 - 2024.07.03",
+            "- 2기 : 2024.07.04 - 2024.08.29(전체)",
+            "- 4기 : 2024.09.26 - 2024.11.22(전체)",
+            "- 8기 : 2025.04(일부)"
+          ]
+        },
+        {
+          "category": "교안 제작 및 강의",
+          "items": [
+            "코드잇 측에서 제공한 필수 내용 및 가이드 토대로 교안 및 스크립트 작성",
+            "수준별 실습으로 단양한 수준의 수강생이 함께 학습할 수 있도록 함",
+            "첫번째 단위기간 기준 총 수료 인원 15명, 이전 기수와 비교하여 7명 증가(87.5% 증가)",
+            "주마다 시행되는 강의 평가를 기반으로 수강생 요구사항 적극 수용(수강생 평가 5.74/6점 만점)"
+          ]
+        },
+        {
+          "category": "이론 강의 내용",
+          "items": [
+            "React 생태계의 CSS 프레임워크(실습은 주로 Tailwind CSS)",
+            "애니메이션의 종류와 주요 라이브러리(Motion(구 Framer Motion), React Spring 실습)",
+            "프론트엔드 테스팅(Jest, React Testing Library)",
             "DevOps와 CI/CD파이프라인(Github Action 실습)"
           ]
         },
@@ -51,20 +122,31 @@
         },
         {
           "category": "출결 및 수강생 관리",
-          "items": ["신청자 대상 보충학습 진행(매주 토요일)"]
+          "items": ["신청자 대상 보충학습 진행(매주 토요일)", "수강생 개별/팀별 프로그래밍 능력 및 소프트 스킬 평가"]
         }
+      ],
+      "stack": [
+        "Tailwind CSS",
+        "React",
+        "TypeScript",
+        "Next.js",
+        "Motion(Framer Motion)",
+        "React Spring",
+        "Jest",
+        "React Testing Library",
+        "GitHub Actions"
       ]
     },
     {
       "id": "artue",
-      "company": "주식회사아트루소시에이티",
-      "companyEn": "Artue",
+      "company": "주식회사 아비투스어소시에이트",
+      "companyEn": "Habitus Associate",
       "website": "https://artue.io/",
       "position": "Frontend Developer",
       "period": "2023.10 - 2024.05",
       "responsibilities": [
         {
-          "category": "아튜 | Artue (스토어/아트민/앱) 개발",
+          "category": "아튜 | Artue (스토어/어드민/앱) 개발",
           "items": []
         },
         {
@@ -75,7 +157,7 @@
           "category": "스토어 주요업무",
           "items": [
             "컨텐츠 다국어 적용(ko/en) 및 언어변경시 부드러운 전환을 위한 UI처리",
-            "트래킹 적정(GA4, Amplitude, Meta Pixel)",
+            "트래킹 작업(GA4, Amplitude, Meta Pixel)",
             "기존 커스텀 스켈레톤 대신 Next.js placeholder 활용하여 부드러운 화면처리",
             "Next.js Middleware를 활용한 레거시 URL대응"
           ]
@@ -97,20 +179,21 @@
     },
     {
       "id": "luaeb",
-      "company": "뉴스랜드도앤엠씨",
-      "companyEn": "LUAEB",
+      "company": "뉴스탠다드에프앤씨",
+      "companyEn": "New Standard F&C",
       "website": "https://luaeb.com/",
       "position": "Software Engineer",
       "period": "2022.07 - 2023.08",
       "responsibilities": [
         {
-          "category": "루엠 | LUAEB (스토어/아트민/앱 개발)",
+          "category": "루앱 | LUAEB (스토어/어드민/앱 개발)",
           "items": []
         },
         {
           "category": "스토어 주요업무",
           "items": [
-            "MVC(Model-View-Controller) 기반의 React 프레임워크 이용함",
+            "React 프레임워크 이용",
+            "MVC(Model-View-Controller) 구조 경험",
             "MAU 5k와 소량 물맛을 제작 및 유지보수",
             "모바일, 태블릿 반응형 제작",
             "채팅룸, Sentry, Amplitude 등의 도구를 활용하여 사용자의 요구사항을 빠른 추기로 반영",
@@ -134,7 +217,7 @@
         },
         {
           "category": "Node.js / AWS S3 활용하여 네이버/메타 광고에 루엠의 전 상품 노출",
-          "items": ["백엔드 환경 이관후 매출 모멘텀이 꺼이지 않도록 기여"]
+          "items": ["백엔드 환경 이관후 매출 모멘텀이 꺾이지 않도록 기여"]
         }
       ],
       "stack": ["Chakra UI", "Material UI", "Tamagui", "Zustand", "React Query", "Formik"]
@@ -157,7 +240,7 @@
   ],
   "skills": {
     "primary": ["React", "TypeScript", "Next.js"],
-    "additional": ["GraphQL", "Restful API", "Github", "Webstorm", "Vim"]
+    "additional": ["Motion", "GraphQL", "Restful API", "Git", "Webstorm", "Vim"]
   },
   "languages": [
     {
@@ -167,5 +250,40 @@
       "certification": "JLPT N2 (2024.01.11 취득)"
     }
   ],
-  "interests": ["이력서 회식(2024년 20회)", "프론트엔드 프로그래밍 레슨", "교육 관련 논문 읽기"]
+  "projects": [{
+    "id": "build-talk",
+    "company": "빌드톡",
+    "companyEn": "Build Talk",
+    "productLink": "https://buildtalk.info/",
+    "thevcLink": "https://thevc.kr/buildtalk",
+    "position": "Frontend Developer",
+    "period": "2024.8 - Present",
+    "responsibilities": [
+      {
+        "category": "빌드톡 | Build Talk 웹사이트 개발",
+        "items": [
+          "주요 기능: 용도 변경 가능성 간편 조회",
+          "- 현재 부동산 용도 변경을 위해서는 건축사 등 전문가에게 직접 의뢰해야 합니다.",
+          "- 이 서비스를 이용하면 전문가에게 문의하기 전에 쉽게 용도변경 가능성을 확인할 수 있습니다."
+        ]
+      },
+      {
+        "category": "업무 범위",
+        "items": [
+          "주소 입력시 정부 API사용하여 해당 건물 정보 취득",
+          "취득 정보 활용하여 용도변경 가능성 판별",
+          "판별 결과를 사용자에게 시각적으로 제공"
+        ]
+      },
+      {
+        "category": "스토어 주요업무",
+        "items": [
+          "컨텐츠 다국어 적용(ko/en) 및 언어변경시 부드러운 전환을 위한 UI처리",
+          "트래킹 작업(GA4, Amplitude, Meta Pixel)",
+          "기존 커스텀 스켈레톤 대신 Next.js placeholder 활용하여 부드러운 화면처리",
+          "Next.js Middleware를 활용한 레거시 URL대응"
+        ]
+      }
+    ]
+  }]
 }

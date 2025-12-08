@@ -9,19 +9,19 @@ interface Responsibility {
   items: string[]
 }
 
-interface Employment {
+interface Project {
   id: string
   company: string
   companyEn: string
-  website?: string
+  productLink?: string
+  thevcLink?: string
   position: string
-  type?: string
   period: string
   responsibilities: Responsibility[]
   stack?: string[]
 }
 
-export function EmploymentCard({ job, index }: { job: Employment; index: number }) {
+export function ProjectCard({ project, index }: { project: Project; index: number }) {
   return (
     <motion.div
       className="mb-8 p-6 rounded-lg bg-card border border-border hover:border-primary/50 transition-colors"
@@ -35,10 +35,10 @@ export function EmploymentCard({ job, index }: { job: Employment; index: number 
         <div className="flex flex-wrap items-start justify-between gap-2 mb-2">
           <div>
             <h3 className="text-xl font-bold flex items-center gap-2 flex-wrap">
-              {job.company}
-              {job.website && (
+              {project.company}
+              {project.productLink && (
                 <a
-                  href={job.website}
+                  href={project.productLink}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-primary hover:text-primary/80 transition-colors"
@@ -46,19 +46,28 @@ export function EmploymentCard({ job, index }: { job: Employment; index: number 
                   <ExternalLink className="w-4 h-4" />
                 </a>
               )}
+              {project.thevcLink && (
+                <a
+                  href={project.thevcLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground hover:text-primary/80 transition-colors text-xs"
+                >
+                  (TheVC)
+                </a>
+              )}
             </h3>
-            <p className="text-muted-foreground text-sm">{job.companyEn}</p>
+            <p className="text-muted-foreground text-sm">{project.companyEn}</p>
           </div>
-          <span className="text-sm text-muted-foreground whitespace-nowrap">{job.period}</span>
+          <span className="text-sm text-muted-foreground whitespace-nowrap">{project.period}</span>
         </div>
         <p className="text-base font-medium text-foreground">
-          {job.position}
-          {job.type && <span className="text-sm text-muted-foreground ml-2">({job.type})</span>}
+          {project.position}
         </p>
       </div>
 
       <div className="space-y-4">
-        {job.responsibilities.map((resp, idx) => (
+        {project.responsibilities.map((resp, idx) => (
           <div key={idx}>
             {resp.category && <h4 className="font-medium mb-2 text-foreground">• {resp.category}</h4>}
             {resp.items.length > 0 && (
@@ -82,7 +91,7 @@ export function EmploymentCard({ job, index }: { job: Employment; index: number 
         ))}
       </div>
 
-      {job.stack && <TechStack stack={job.stack} />}
+      {project.stack && <TechStack stack={project.stack} />}
     </motion.div>
   )
 }
