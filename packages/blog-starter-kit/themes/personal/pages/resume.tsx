@@ -5,6 +5,7 @@ import { EmploymentCard } from "../components/resume/employment-card"
 import { ProjectCard } from "../components/resume/project-card"
 import { EducationCard } from "../components/resume/education-card"
 import { SkillsSection } from "../components/resume/skills-section"
+import { SectionDivider } from "../components/resume/section-divider"
 import { Button } from "../components/button"
 
 export default function ResumePage() {
@@ -31,6 +32,7 @@ export default function ResumePage() {
 						{resumeData.employment.map((job, index) => (
 							<EmploymentCard key={job.id} job={job} index={index} />
 						))}
+						<SectionDivider label="Engineering" />
 						{resumeData.employmentEngineer.map((job, index) => (
 							<EmploymentCard key={job.id} job={job} index={index} />
 						))}
