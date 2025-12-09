@@ -6,7 +6,7 @@
     "email": "juepark42@gmail.com",
     "phone": "+8210 9599 6425",
     "intro": "안녕하세요. 지식을 나누는 개발자 박주은입니다.",
-    "description": "\"오늘 제가 받은 멘토링은 정말 제가 받고 싶어했던 멘토링 그 자체였습니다.\"\n\n위 내용은 인프런에서 멘토링 후 받은 후기입니다. 숨고, 인프런 그리고 코드잇에서 저를 거쳐간 수강생은 80명이 넘습니다. 다른 사람의 문제를 해결해줄 수 있다는 점 때문에 교육 분야에 매력을 느낍니다."
+    "description": "\"오늘 제가 받은 멘토링은 정말 제가 받고 싶어했던 멘토링 그 자체였습니다.\"\n\n위 내용은 인프런에서 멘토링 후 받은 후기입니다. 다른 사람의 문제를 해결해줄 수 있다는 점에 교육 분야에 큰 매력을 느껴 개발자에서 교육자로 전환하였습니다.\n현재 저는 코드잇에서 프론트엔드 엔지니어 과정의 주강사로 일하고 있으며, 지금까지 대략 80여명의 수강생을 가르쳤습니다."
   },
   "links": {
     "github": "https://github.com/humonnom",
@@ -136,13 +136,16 @@
         "React Testing Library",
         "GitHub Actions"
       ]
-    },
+    }
+  ],
+  "employmentEngineer": [
     {
       "id": "artue",
       "company": "주식회사 아비투스어소시에이트",
       "companyEn": "Habitus Associate",
       "website": "https://artue.io/",
-      "position": "Frontend Developer",
+      "position": "Frontend Developer | 프론트엔드 개발자",
+      "type": "정규직",
       "period": "2023.10 - 2024.05",
       "responsibilities": [
         {
@@ -178,51 +181,51 @@
       "stack": ["Material UI", "emotion", "Zustand", "React Query", "React Hook Form"]
     },
     {
-      "id": "luaeb",
-      "company": "뉴스탠다드에프앤씨",
-      "companyEn": "New Standard F&C",
-      "website": "https://luaeb.com/",
-      "position": "Software Engineer",
-      "period": "2022.07 - 2023.08",
-      "responsibilities": [
-        {
-          "category": "루앱 | LUAEB (스토어/어드민/앱 개발)",
-          "items": []
-        },
-        {
-          "category": "스토어 주요업무",
-          "items": [
-            "React 프레임워크 이용",
-            "MVC(Model-View-Controller) 구조 경험",
-            "MAU 5k와 소량 물맛을 제작 및 유지보수",
-            "모바일, 태블릿 반응형 제작",
-            "채팅룸, Sentry, Amplitude 등의 도구를 활용하여 사용자의 요구사항을 빠른 추기로 반영",
-            "i18n 기반 다국어 적용(ko/en)"
-          ]
-        },
-        {
-          "category": "어드민 주요업무",
-          "items": ["300여개 브랜드가 이용하는 어드민 개발 및 유지보수"]
-        },
-        {
-          "category": "앱 주요업무",
-          "items": ["React Native를 활용하여 웃물 기능이 있는 앱 제작"]
-        },
-        {
-          "category": "백엔드 환경 이관",
-          "items": [
-            "기존 백엔드 환경에서 NHN의 Shop by 솔루션으로 이관",
-            "유틸 그대로 유지하면서 기존 API에서 솔루션 API로 변경하는 작업"
-          ]
-        },
-        {
-          "category": "Node.js / AWS S3 활용하여 네이버/메타 광고에 루엠의 전 상품 노출",
-          "items": ["백엔드 환경 이관후 매출 모멘텀이 꺾이지 않도록 기여"]
-        }
-      ],
-      "stack": ["Chakra UI", "Material UI", "Tamagui", "Zustand", "React Query", "Formik"]
-    }
-  ],
+    "id": "luaeb",
+    "company": "뉴스탠다드에프앤씨",
+    "companyEn": "New Standard F&C",
+    "website": "https://luaeb.com/",
+    "position": "Software Engineer | 소프트웨어 엔지니어",
+    "type": "정규직",
+    "period": "2022.07 - 2023.08",
+    "responsibilities": [
+      {
+        "category": "루앱 | LUAEB (스토어/어드민/앱 개발)",
+        "items": []
+      },
+      {
+        "category": "스토어 주요업무",
+        "items": [
+          "React 프레임워크 이용",
+          "MVC(Model-View-Controller) 구조 경험",
+          "MAU 5k와 소량 물맛을 제작 및 유지보수",
+          "모바일, 태블릿 반응형 제작",
+          "채팅룸, Sentry, Amplitude 등의 도구를 활용하여 사용자의 요구사항을 빠른 추기로 반영",
+          "i18n 기반 다국어 적용(ko/en)"
+        ]
+      },
+      {
+        "category": "어드민 주요업무",
+        "items": ["300여개 브랜드가 이용하는 어드민 개발 및 유지보수"]
+      },
+      {
+        "category": "앱 주요업무",
+        "items": ["React Native를 활용하여 웃물 기능이 있는 앱 제작"]
+      },
+      {
+        "category": "백엔드 환경 이관",
+        "items": [
+          "기존 백엔드 환경에서 NHN의 Shop by 솔루션으로 이관",
+          "유틸 그대로 유지하면서 기존 API에서 솔루션 API로 변경하는 작업"
+        ]
+      },
+      {
+        "category": "Node.js / AWS S3 활용하여 네이버/메타 광고에 루엠의 전 상품 노출",
+        "items": ["백엔드 환경 이관후 매출 모멘텀이 꺾이지 않도록 기여"]
+      }
+    ],
+    "stack": ["Chakra UI", "Material UI", "Tamagui", "Zustand", "React Query", "Formik"]
+  }],
   "education": [
     {
       "school": "Ecole 42",

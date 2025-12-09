@@ -31,6 +31,9 @@ export default function ResumePage() {
 						{resumeData.employment.map((job, index) => (
 							<EmploymentCard key={job.id} job={job} index={index} />
 						))}
+						{resumeData.employmentEngineer.map((job, index) => (
+							<EmploymentCard key={job.id} job={job} index={index} />
+						))}
 					</div>
 				</section>
 
