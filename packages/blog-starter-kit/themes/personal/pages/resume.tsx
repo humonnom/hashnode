@@ -7,6 +7,7 @@ import { EducationCard } from "../components/resume/education-card"
 import { SkillsSection } from "../components/resume/skills-section"
 import { SectionDivider } from "../components/resume/section-divider"
 import { Button } from "../components/button"
+import OnlineLectureIllustration from '../components/resume/online-lecture-illustration';
 
 export default function ResumePage() {
 	const handlePrint = () => {
@@ -15,6 +16,7 @@ export default function ResumePage() {
 
 	return (
 		<main className="min-h-screen bg-background text-foreground [&_*]:border-border [&_*]:outline-ring/50">
+			<OnlineLectureIllustration />
 			<div className="max-w-4xl mx-auto px-4 py-12 md:py-16">
 				<div className="flex justify-between items-start mb-8">
 					<ResumeHeader personal={resumeData.personal} links={resumeData.links} />
