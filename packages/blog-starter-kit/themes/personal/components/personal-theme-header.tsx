@@ -91,12 +91,12 @@ export const PersonalHeader = () => {
 			<div className="col-span-full flex flex-row items-center justify-between gap-4 md:col-span-1 md:justify-end">
 				<nav>{navList}</nav>
 				<ToggleTheme className="hidden md:block" />
-				<Link href="/resume">
-					<Button
-						label="Resume"
-						type="outline"
-					/>
-				</Link>
+				{/*<Link href="/resume">*/}
+				{/*	<Button*/}
+				{/*		label="Resume"*/}
+				{/*		type="outline"*/}
+				{/*	/>*/}
+				{/*</Link>*/}
 			</div>
 		</header>
 	);
