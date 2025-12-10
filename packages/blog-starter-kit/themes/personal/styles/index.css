@@ -129,3 +129,9 @@
   background-color: transparent;
   color: #ddd;
 }
+
+@media print {
+  body {
+    zoom: 0.87;
+  }
+}
