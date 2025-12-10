@@ -1,0 +1,196 @@
+{
+  "personal": {
+    "name": "Jueun Park",
+    "nameKo": "박주은",
+    "title": "Frontend Developer",
+    "email": "juepark42@gmail.com",
+    "phone": "+8210 9599 6425",
+    "intro": "안녕하세요. 프론트엔드 개발자 박주은입니다.",
+    "description": "컴퓨터 공학 스쿨인 Ecole42에서 학습을 시작하여 프론트엔드 엔지니어로서 두 군데의 스타트업을 경험했습니다. 현재는 코드잇에서 프리랜서 강사로 일하고 있습니다.\n\n안정적인 코드 작성 | Next.js에서 제공하는 서버사이드 렌더링 및 API 레퍼런스를 필요에 따라 적절히 활용할 수 있습니다. Typescript로 안정적인 React 코드를 작성할 수 있습니다.\n\n역량 향상을 위한 활동 | 역량 향상을 위해 업무 외적으로 프로그래밍 교육 및 멘토링 활동을 하고 있습니다.\n\n주요 스택 | React, Next.js와 Typescript"
+  },
+  "links": {
+    "github": "https://github.com/humonnom",
+    "blog": "https://humonnom.vercel.app/",
+    "linkedin": "https://www.linkedin.com/in/juepark"
+  },
+  "employmentEngineer": [
+    {
+      "id": "artue",
+      "company": "주식회사 아비투스어소시에이트",
+      "companyEn": "Habitus Associate",
+      "website": "https://artue.io/",
+      "position": "Frontend Developer | 프론트엔드 개발자",
+      "type": "정규직",
+      "period": "2023.10 - 2024.05",
+      "responsibilities": [
+        {
+          "category": "아튜 | Artue (스토어/어드민/앱) 개발",
+          "items": []
+        },
+        {
+          "category": "레거시 코드 개선을 위한 적극적인 코드 리뷰 및 개선사항 제안",
+          "items": []
+        },
+        {
+          "category": "스토어 주요업무",
+          "items": [
+            "컨텐츠 다국어 적용(ko/en) 및 언어변경시 부드러운 전환을 위한 UI처리",
+            "트래킹 작업(GA4, Amplitude, Meta Pixel)",
+            "기존 커스텀 스켈레톤 대신 Next.js placeholder 활용하여 부드러운 화면처리",
+            "Next.js Middleware를 활용한 레거시 URL대응"
+          ]
+        },
+        {
+          "category": "웹사이트 성능 개선",
+          "items": ["패키지 최적화로 빌드 시간 30%단축"]
+        },
+        {
+          "category": "서버사이드 렌더링",
+          "items": ["서버사이드 렌더링 개선"]
+        },
+        {
+          "category": "코드로드시점 최적화",
+          "items": ["일부 컴포넌트 코드를 불필요한 시점에 호출함", "사용하는 시점에 호출함"]
+        }
+      ],
+      "stack": ["Material UI", "emotion", "Zustand", "React Query", "React Hook Form"]
+    },
+    {
+      "id": "luaeb",
+      "company": "뉴스탠다드에프앤씨",
+      "companyEn": "New Standard F&C",
+      "website": "https://luaeb.com/",
+      "position": "Software Engineer | 소프트웨어 엔지니어",
+      "type": "정규직",
+      "period": "2022.07 - 2023.08",
+      "responsibilities": [
+        {
+          "category": "루앱 | LUAEB (스토어/어드민/앱 개발)",
+          "items": []
+        },
+        {
+          "category": "스토어 주요업무",
+          "items": [
+            "React 프레임워크 이용",
+            "MVC(Model-View-Controller) 구조 경험",
+            "MAU 5k의 소형 몰 제작 및 유지보수",
+            "모바일, 태블릿 반응형 제작",
+            "채팅룸, Sentry, Amplitude 등의 도구를 활용하여 사용자의 요구사항을 빠른 주기로 반영",
+            "i18n 기반 다국어 적용(ko/en)"
+          ]
+        },
+        {
+          "category": "어드민 주요업무",
+          "items": ["300여개 브랜드가 이용하는 어드민 개발 및 유지보수"]
+        },
+        {
+          "category": "앱 주요업무",
+          "items": ["React Native를 활용하여 웹뷰 기능이 있는 앱 제작"]
+        },
+        {
+          "category": "백엔드 환경 이관",
+          "items": [
+            "기존 백엔드 환경에서 NHN의 Shop by 솔루션으로 이관",
+            "유지 그대로 유지하면서 기존 API에서 솔루션 API로 변경하는 작업"
+          ]
+        },
+        {
+          "category": "Node.js / AWS S3 활용하여 네이버/메타 광고에 루앱의 전 상품 노출",
+          "items": ["백엔드 환경 이관후 매출 모멘텀이 꺾이지 않도록 기여"]
+        }
+      ],
+      "stack": ["Chakra UI", "Material UI", "Tamagui", "Zustand", "React Query", "Formik"]
+    }
+  ],
+  "employment": [
+    {
+      "id": "codeit",
+      "company": "코드잇",
+      "companyEn": "Codeit",
+      "position": "Lead Instructor | 주강사",
+      "type": "프리랜서",
+      "period": "2024.06 - Present",
+      "responsibilities": [
+        {
+          "category": "프론트엔드 과정 강의 및 멘토링",
+          "items": [
+            "프론트엔드 단기 심화과정 및 엔지니어 과정 주강사",
+            "코드 리뷰, 프로젝트 멘토링, 질의응답 진행",
+            "누적 80여명의 수강생 지도"
+          ]
+        },
+        {
+          "category": "계약 내역",
+          "items": [
+            "프론트엔드 엔지니어 과정 (26주 과정, 1248 시간) 주강사",
+            "- 21기 : 2025.10.16 - 2026.04.10 (진행중)",
+            "프론트엔드 단기 심화과정 (10주 과정, 349 시간) 주강사",
+            "- 강의 자료 제작 : 2024.06.20 - 2024.07.03",
+            "- 2기 : 2024.07.04 - 2024.08.29",
+            "- 4기 : 2024.09.26 - 2024.11.22",
+            "- 8기 : 2025.04 (대체강사로 일부 기간 투입)",
+            "프론트엔드 단기 심화과정(10주 과정, 주 1-2회) 멘토",
+            "- 9기 : 2025.04.24 - 2025.06.24"
+          ]
+        }
+      ],
+      "stack": ["React", "TypeScript", "Next.js", "Tailwind CSS"]
+    }
+  ],
+  "projects": [
+    {
+      "id": "build-talk",
+      "company": "빌드톡",
+      "companyEn": "Build Talk",
+      "productLink": "https://buildtalk.info/",
+      "thevcLink": "https://thevc.kr/buildtalk",
+      "position": "Frontend Developer",
+      "period": "2024.8 - Present",
+      "responsibilities": [
+        {
+          "category": "빌드톡 | Build Talk 웹사이트 개발",
+          "items": [
+            "주요 기능: 용도 변경 가능성 간편 조회",
+            "- 현재 부동산 용도 변경을 위해서는 건축사 등 전문가에게 직접 의뢰해야 합니다.",
+            "- 이 서비스를 이용하면 전문가에게 문의하기 전에 쉽게 용도변경 가능성을 확인할 수 있습니다."
+          ]
+        },
+        {
+          "category": "업무 범위",
+          "items": [
+            "주소 입력시 정부 API사용하여 해당 건물 정보 취득",
+            "취득 정보 활용하여 용도변경 가능성 판별",
+            "판별 결과를 사용자에게 시각적으로 제공"
+          ]
+        }
+      ]
+    }
+  ],
+  "education": [
+    {
+      "school": "Ecole 42",
+      "schoolKo": "에콜 42",
+      "degree": "Computer Science School 컴퓨터 공학 스쿨",
+      "major": "자료구조, 알고리즘, 네트워크, 데이터베이스, 그래픽 등 기본적인 CS이론 학습",
+      "period": "2020.07 - 2022.07"
+    },
+    {
+      "school": "Hongik University",
+      "schoolKo": "홍익대학교",
+      "degree": "Art / Sculpture",
+      "period": "2013.03 - 2018.08"
+    }
+  ],
+  "skills": {
+    "primary": ["React", "TypeScript", "Next.js"],
+    "additional": ["Motion", "GraphQL", "Restful API", "Git", "Webstorm", "Vim"]
+  },
+  "languages": [
+    {
+      "language": "Japanese",
+      "languageKo": "일본어",
+      "level": "Conversational",
+      "certification": "JLPT N2 (2024.01.11 취득)"
+    }
+  ]
+}

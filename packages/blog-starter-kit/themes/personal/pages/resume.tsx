@@ -1,23 +1,29 @@
-import resumeData from "../data/resume.json"
-import { ResumeHeader } from "../components/resume/resume-header"
-import { SectionTitle } from "../components/resume/section-title"
-import { EmploymentCard } from "../components/resume/employment-card"
-import { ProjectCard } from "../components/resume/project-card"
-import { EducationCard } from "../components/resume/education-card"
-import { SkillsSection } from "../components/resume/skills-section"
-import { SectionDivider } from "../components/resume/section-divider"
-import { Button } from "../components/button"
+import { useRouter } from 'next/router';
+import { Button } from '../components/button';
+import { EducationCard } from '../components/resume/education-card';
+import { EmploymentCard } from '../components/resume/employment-card';
+import { ProjectCard } from '../components/resume/project-card';
+import { ResumeHeader } from '../components/resume/resume-header';
+import { SectionDivider } from '../components/resume/section-divider';
+import { SectionTitle } from '../components/resume/section-title';
+import { SkillsSection } from '../components/resume/skills-section';
+import resumeDataDev from '../data/resume-dev.json';
+import resumeData from '../data/resume.json';
 
 export default function ResumePage() {
+	const router = useRouter();
+	const isDev = router.query.dev === 'true';
+	const data = isDev ? resumeDataDev : resumeData;
+
 	const handlePrint = () => {
-		window.print()
-	}
+		window.print();
+	};
 
 	return (
-		<main className="min-h-screen bg-background text-foreground [&_*]:border-border [&_*]:outline-ring/50">
-			<div className="max-w-4xl mx-auto px-4 py-12 md:py-16">
-				<div className="flex justify-between items-start mb-8">
-					<ResumeHeader personal={resumeData.personal} links={resumeData.links} />
+		<main className="bg-background text-foreground [&_*]:border-border [&_*]:outline-ring/50 min-h-screen">
+			<div className="mx-auto max-w-4xl px-4 py-12 md:py-16">
+				<div className="mb-8 flex items-start justify-between">
+					<ResumeHeader personal={data.personal} links={data.links} />
 					<Button
 						label="PDF로 출력"
 						type="outline"
@@ -28,21 +34,33 @@ export default function ResumePage() {
 
 				<section className="mb-12">
 					<SectionTitle>Employment</SectionTitle>
-					<div>
-						{resumeData.employment.map((job, index) => (
-							<EmploymentCard key={job.id} job={job} index={index} />
-						))}
-						<SectionDivider label="Engineering" />
-						{resumeData.employmentEngineer.map((job, index) => (
-							<EmploymentCard key={job.id} job={job} index={index} />
-						))}
-					</div>
+					{isDev ? (
+						<div>
+							{data.employmentEngineer.map((job, index) => (
+								<EmploymentCard key={job.id} job={job} index={index} />
+							))}
+							<SectionDivider label="Instructor" />
+							{data?.employment.map((job, index) => (
+								<EmploymentCard key={job.id} job={job} index={index} />
+							))}
+						</div>
+					) : (
+						<div>
+							{data.employment.map((job, index) => (
+								<EmploymentCard key={job.id} job={job} index={index} />
+							))}
+							<SectionDivider label="Engineering" />
+							{data?.employmentEngineer.map((job, index) => (
+								<EmploymentCard key={job.id} job={job} index={index} />
+							))}
+						</div>
+					)}
 				</section>
 
 				<section className="mb-12">
 					<SectionTitle>Education</SectionTitle>
 					<div>
-						{resumeData.education.map((edu, index) => (
+						{data.education.map((edu, index) => (
 							<EducationCard key={index} edu={edu} index={index} />
 						))}
 					</div>
@@ -50,20 +68,20 @@ export default function ResumePage() {
 
 				<section className="mb-12">
 					<SectionTitle>Technical Skills</SectionTitle>
-					<SkillsSection skills={resumeData.skills} />
+					<SkillsSection skills={data.skills} />
 				</section>
 
 				<section className="mb-12">
 					<SectionTitle>Language</SectionTitle>
-					{resumeData.languages.map((lang, index) => (
-						<div key={index} className="p-5 rounded-lg bg-card border border-border">
+					{data.languages.map((lang, index) => (
+						<div key={index} className="bg-card border-border rounded-lg border p-5">
 							<p className="text-base font-medium">
-								{lang.language}{" "}
+								{lang.language}{' '}
 								<span className="text-muted-foreground">
-                  {lang.languageKo} - {lang.level}
-                </span>
+									{lang.languageKo} - {lang.level}
+								</span>
 							</p>
-							<p className="text-sm text-muted-foreground mt-1">{lang.certification}</p>
+							<p className="text-muted-foreground mt-1 text-sm">{lang.certification}</p>
 						</div>
 					))}
 				</section>
@@ -71,12 +89,12 @@ export default function ResumePage() {
 				<section className="mb-12">
 					<SectionTitle>Projects</SectionTitle>
 					<div>
-						{resumeData.projects.map((project, index) => (
+						{data.projects.map((project, index) => (
 							<ProjectCard key={project.id} project={project} index={index} />
 						))}
 					</div>
 				</section>
 			</div>
 		</main>
-	)
+	);
 }
