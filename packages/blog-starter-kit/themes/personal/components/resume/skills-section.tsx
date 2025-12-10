@@ -1,11 +1,7 @@
 "use client"
 
 import { motion } from "motion/react"
-
-interface Skills {
-  primary: string[]
-  additional: string[]
-}
+import { Skills } from "./types"
 
 export function SkillsSection({ skills }: { skills: Skills }) {
   return (

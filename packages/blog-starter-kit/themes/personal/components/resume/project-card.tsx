@@ -1,21 +1,5 @@
 import { BaseCard } from "./base-card"
-
-interface Responsibility {
-  category: string
-  items: string[]
-}
-
-interface Project {
-  id: string
-  company: string
-  companyEn: string
-  productLink?: string
-  thevcLink?: string
-  position: string
-  period: string
-  responsibilities: Responsibility[]
-  stack?: string[]
-}
+import { Project } from "./types"
 
 export function ProjectCard({ project, index }: { project: Project; index: number }) {
   const links = []

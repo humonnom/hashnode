@@ -2,14 +2,7 @@
 
 import { motion } from "motion/react"
 import { GraduationCap } from "lucide-react"
-
-interface Education {
-  school: string
-  schoolKo: string
-  degree: string
-  major?: string
-  period: string
-}
+import { Education } from "./types"
 
 export function EducationCard({ edu, index }: { edu: Education; index: number }) {
   return (

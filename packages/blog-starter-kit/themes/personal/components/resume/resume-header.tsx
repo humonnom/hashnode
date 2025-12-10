@@ -2,22 +2,7 @@
 
 import { motion } from "motion/react"
 import { Mail, Phone, Github, BookOpen, Linkedin } from "lucide-react"
-
-interface PersonalInfo {
-  name: string
-  nameKo: string
-  title: string
-  email: string
-  phone: string
-  intro: string
-  description: string
-}
-
-interface Links {
-  github: string
-  blog: string
-  linkedin: string
-}
+import { PersonalInfo, Links } from "./types"
 
 export function ResumeHeader({ personal, links }: { personal: PersonalInfo; links: Links }) {
   return (

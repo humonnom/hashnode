@@ -1,21 +1,5 @@
 import { BaseCard } from "./base-card"
-
-interface Responsibility {
-  category: string
-  items: string[]
-}
-
-interface Employment {
-  id: string
-  company: string
-  companyEn: string
-  website?: string
-  position: string
-  type?: string
-  period: string
-  responsibilities: Responsibility[]
-  stack?: string[]
-}
+import { Employment } from "./types"
 
 export function EmploymentCard({ job, index }: { job: Employment; index: number }) {
   const links = job.website ? [{ href: job.website }] : []
