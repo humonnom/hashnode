@@ -6,7 +6,7 @@
     "email": "juepark42@gmail.com",
     "phone": "+8210 9599 6425",
     "intro": "안녕하세요. 프론트엔드 개발자 박주은입니다.",
-    "description": "컴퓨터 공학 스쿨인 Ecole42에서 학습을 시작하여 프론트엔드 엔지니어로서 두 군데의 스타트업을 경험했습니다. 현재는 코드잇에서 프리랜서 강사로 일하고 있습니다.\n\n안정적인 코드 작성 | Next.js에서 제공하는 서버사이드 렌더링 및 API 레퍼런스를 필요에 따라 적절히 활용할 수 있습니다. Typescript로 안정적인 React 코드를 작성할 수 있습니다.\n\n주요 스택 | React, Next.js와 Typescript"
+    "description": "프론트엔드 엔지니어로서 두 군데의 스타트업에 근무하고 현재는 코드잇에서 프리랜서 강사로 일하고 있습니다.\n\nNext.js에서 제공하는 서버사이드 렌더링 및 API 레퍼런스를 필요에 따라 적절히 활용하며, Typescript로 안정적인 React 코드를 작성할 수 있습니다.\n\n새로운 것을 빠르게 학습하는 것에 자신이 있습니다."
   },
   "links": {
     "github": "https://github.com/humonnom",
@@ -139,6 +139,26 @@
   ],
   "projects": [
     {
+      "id": "love-cation",
+      "company": "럽케이션",
+      "companyEn": "Lovecation",
+      "productLink": "https://lovecation-web.vercel.app/ko",
+      "position": "Solo Developer",
+      "period": "2025.8 - Present",
+      "responsibilities": [
+        {
+          "category": "Love \uD83D\uDC9A + Vacation \uD83D\uDEA2 | 사이드 프로젝트",
+          "items": [
+            "주요 기능: 한일 데이팅 앱",
+            "- 다국어 지원(한국어, 일본어)",
+            "- 현재 데모 버전 개발중",
+            "- 모바일 우선 디자인 및 개발"
+          ]
+        }
+      ],
+      "stack": ["Supabase", "Vercel", "V0", "Claude AI", "Copilot", "Next.js", "React", "TypeScript", "Tailwind CSS", "Motion"]
+    },
+    {
       "id": "build-talk",
       "company": "빌드톡",
       "companyEn": "Build Talk",
@@ -163,7 +183,8 @@
             "판별 결과를 사용자에게 시각적으로 제공"
           ]
         }
-      ]
+      ],
+      "stack": ["Next.js", "React", "TypeScript", "Tailwind CSS", "Vercel", "Copilot"]
     }
   ],
   "education": [
@@ -183,7 +204,7 @@
   ],
   "skills": {
     "primary": ["React", "TypeScript", "Next.js"],
-    "additional": ["Motion", "GraphQL", "Restful API", "Git", "Webstorm", "Vim"]
+    "additional": ["Motion", "GraphQL", "Restful API", "Git"]
   },
   "languages": [
     {
