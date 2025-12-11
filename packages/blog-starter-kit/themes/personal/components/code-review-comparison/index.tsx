@@ -17,7 +17,7 @@ interface CodeReviewComparisonProps {
 	after: string;
 	language?: string;
 	title?: string;
-	description?: string;
+	descriptions?: string[];
 	highlightChanges?: boolean;
 }
 
@@ -52,7 +52,7 @@ export function CodeReviewComparison({
 	after,
 	language = 'typescript',
 	title,
-	description,
+	descriptions,
 	highlightChanges = true,
 }: CodeReviewComparisonProps) {
 	const [view, setView] = useState<'both' | 'after'>('both');
@@ -119,9 +119,9 @@ export function CodeReviewComparison({
 					const highlightedLine = lines[i] || '';
 					const lineClass =
 						line.type === 'removed'
-							? 'bg-destructive/10 -mx-4 px-4 border-l-2 border-destructive block'
+							? 'bg-red-500/20 -mx-4 px-4 border-l-4 border-red-500 block'
 							: line.type === 'added'
-							? 'bg-primary/10 -mx-4 px-4 border-l-2 border-primary block'
+							? 'bg-green-500/20 -mx-4 px-4 border-l-4 border-green-500 block'
 							: 'block';
 
 					return (
@@ -142,8 +142,10 @@ export function CodeReviewComparison({
 				{title && (
 					<div className="space-y-2">
 						<h3 className="text-balance text-xl font-semibold">{title}</h3>
-						{description && (
-							<p className="text-muted-foreground text-pretty text-sm">{description}</p>
+						{descriptions?.length && (
+							<p className="text-muted-foreground text-pretty whitespace-pre-line text-sm">
+								{descriptions.join('\n')}
+							</p>
 						)}
 					</div>
 				)}
@@ -159,8 +161,10 @@ export function CodeReviewComparison({
 			{title && (
 				<div className="space-y-2">
 					<h3 className="text-balance text-xl font-semibold">{title}</h3>
-					{description && (
-						<p className="text-muted-foreground text-pretty text-sm">{description}</p>
+					{descriptions?.length && (
+						<p className="text-muted-foreground text-pretty whitespace-pre-line text-sm">
+							{descriptions.join('\n')}
+						</p>
 					)}
 				</div>
 			)}

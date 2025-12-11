@@ -11,7 +11,9 @@
       "Bash(do curl -s -o \"$num.png\" \"https://avatar.iran.liara.run/public/$num\")",
       "Bash(done)",
       "Bash(npx --yes shadcn@latest init:*)",
-      "Bash(npx --yes shadcn@latest add:*)"
+      "Bash(npx --yes shadcn@latest add:*)",
+      "WebFetch(domain:github.com)",
+      "Bash(gh api:*)"
     ],
     "deny": [],
     "ask": []
