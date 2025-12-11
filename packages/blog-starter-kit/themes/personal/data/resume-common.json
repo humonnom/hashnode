@@ -1,0 +1,91 @@
+{
+  "personal": {
+    "name": "Jueun Park",
+    "nameKo": "박주은",
+    "title": "Frontend Developer",
+    "email": "juepark42@gmail.com",
+    "phone": "+8210 9599 6425"
+  },
+  "links": {
+    "github": "https://github.com/humonnom",
+    "blog": "https://humonnom.vercel.app/",
+    "linkedin": "https://www.linkedin.com/in/juepark"
+  },
+  "projects": [
+    {
+      "id": "love-cation",
+      "company": "럽케이션",
+      "companyEn": "Lovecation",
+      "productLink": "https://lovecation-web.vercel.app/ko",
+      "position": "Solo Developer",
+      "period": "2025.8 - Present",
+      "responsibilities": [
+        {
+          "category": "Love \uD83D\uDC9A + Vacation \uD83D\uDEA2 | 사이드 프로젝트",
+          "items": [
+            "주요 기능: 한일 데이팅 앱",
+            "- 다국어 지원(한국어, 일본어)",
+            "- 현재 데모 버전 개발중",
+            "- 모바일 우선 디자인 및 개발"
+          ]
+        }
+      ],
+      "stack": ["Supabase", "Vercel", "V0", "Claude AI", "Copilot", "Next.js", "React", "TypeScript", "Tailwind CSS", "Motion"]
+    },
+    {
+      "id": "build-talk",
+      "company": "빌드톡",
+      "companyEn": "Build Talk",
+      "productLink": "https://buildtalk.info/",
+      "thevcLink": "https://thevc.kr/buildtalk",
+      "position": "Frontend Developer",
+      "period": "2024.8 - Present",
+      "responsibilities": [
+        {
+          "category": "빌드톡 | Build Talk 웹사이트 개발",
+          "items": [
+            "주요 기능: 용도 변경 가능성 간편 조회",
+            "- 현재 부동산 용도 변경을 위해서는 건축사 등 전문가에게 직접 의뢰해야 합니다.",
+            "- 이 서비스를 이용하면 전문가에게 문의하기 전에 쉽게 용도변경 가능성을 확인할 수 있습니다."
+          ]
+        },
+        {
+          "category": "업무 범위",
+          "items": [
+            "주소 입력시 정부 API사용하여 해당 건물 정보 취득",
+            "취득 정보 활용하여 용도변경 가능성 판별",
+            "판별 결과를 사용자에게 시각적으로 제공"
+          ]
+        }
+      ],
+      "stack": ["Next.js", "React", "TypeScript", "Tailwind CSS", "Vercel", "Copilot"]
+    }
+  ],
+  "education": {
+    "ecole42": {
+      "school": "Ecole 42",
+      "schoolKo": "에콜 42",
+      "degree": "Computer Science School 컴퓨터 공학 스쿨",
+      "major": "자료구조, 알고리즘, 네트워크, 데이터베이스, 그래픽 등 기본적인 CS이론 학습",
+      "period": "2020.07 - 2022.07"
+    },
+    "hongik": {
+      "school": "Hongik University",
+      "schoolKo": "홍익대학교",
+      "degree": "Art / Sculpture",
+      "period": "2013.03 - 2018.08"
+    }
+  },
+  "skills": {
+    "primary": ["React", "TypeScript", "Next.js"],
+    "additional": ["Motion", "GraphQL", "Restful API", "Git", "Webstorm", "Vim"]
+  },
+  "languages": [
+    {
+      "language": "Japanese",
+      "languageKo": "일본어",
+      "level": "Conversational",
+      "certification": "JLPT N2 (2024.01.11 취득)"
+    }
+  ]
+}

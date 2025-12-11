@@ -132,6 +132,41 @@
 
 @media print {
   body {
-    zoom: 0.87;
+    zoom: 0.75;
+  }
+
+  /* Motion 애니메이션 비활성화 및 모든 요소 표시 */
+  * {
+    animation: none !important;
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  /* 섹션 간격 줄이기 */
+  .mb-12 {
+    margin-bottom: 1.5rem !important;
+  }
+
+  .mb-8 {
+    margin-bottom: 1rem !important;
+  }
+
+  .mb-6 {
+    margin-bottom: 0.75rem !important;
+  }
+
+  /* 개별 카드만 페이지 경계에서 잘리지 않도록 */
+  .rounded-lg {
+    /*page-break-inside: avoid;*/
+  }
+
+  /* padding 줄이기 */
+  .p-6 {
+    padding: 1rem !important;
+  }
+
+  .p-5 {
+    padding: 0.875rem !important;
   }
 }
