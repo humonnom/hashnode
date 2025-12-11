@@ -1,10 +1,10 @@
 'use client';
 
-import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
-import { motion, AnimatePresence } from 'motion/react';
 import { ArrowRight, Check, Copy } from 'lucide-react';
+import { AnimatePresence, motion } from 'motion/react';
+import { useEffect, useState } from 'react';
 import { codeToHtml } from 'shiki';
 
 interface DiffLine {
@@ -70,11 +70,11 @@ export function CodeReviewComparison({
 				const [beforeHtml, afterHtml] = await Promise.all([
 					codeToHtml(before, {
 						lang: language,
-						theme: 'github-dark',
+						theme: 'gruvbox-dark-hard',
 					}),
 					codeToHtml(after, {
 						lang: language,
-						theme: 'github-dark',
+						theme: 'gruvbox-dark-hard',
 					}),
 				]);
 				setHighlightedBefore(beforeHtml);
@@ -184,6 +184,18 @@ export function CodeReviewComparison({
 
 			<div className="relative">
 				<AnimatePresence mode="wait">
+					{view === 'both' && (
+						<motion.div
+							className="absolute left-1/2 top-1/2 z-20 -ml-[1.1rem] hidden md:block"
+							initial={{ scale: 0, rotate: -180 }}
+							animate={{ scale: 1, rotate: 0 }}
+							transition={{ delay: 0.5, type: 'spring', stiffness: 200 }}
+						>
+							<div className="bg-primary text-primary-foreground flex items-center justify-center rounded-full p-1 shadow-lg">
+								<ArrowRight size={30} />
+							</div>
+						</motion.div>
+					)}
 					{view === 'both' ? (
 						<motion.div
 							key="both"
@@ -219,17 +231,6 @@ export function CodeReviewComparison({
 								transition={{ delay: 0.2, duration: 0.4 }}
 								className="relative"
 							>
-								<motion.div
-									className="absolute -left-8 top-1/2 z-20 hidden -translate-y-1/2 md:block"
-									initial={{ scale: 0, rotate: -180 }}
-									animate={{ scale: 1, rotate: 0 }}
-									transition={{ delay: 0.5, type: 'spring', stiffness: 200 }}
-								>
-									<div className="size-12 bg-primary text-primary-foreground flex items-center justify-center rounded-full shadow-lg">
-										<ArrowRight className="size-6" />
-									</div>
-								</motion.div>
-
 								<Card className="border-primary/20 relative overflow-hidden border-2">
 									<div className="bg-primary/5 sticky top-0 z-10 flex items-center justify-between border-b px-4 py-2 backdrop-blur">
 										<span className="text-foreground text-sm font-medium">After</span>
