@@ -20,6 +20,22 @@ interface CodeReviewComparisonProps {
 	descriptions?: string[];
 	highlightChanges?: boolean;
 }
+function Title({ text }: { text?: string }) {
+	return text ? <h3 className="text-balance text-xl font-semibold">{text}</h3> : null;
+}
+
+function Description({ descriptions }: { descriptions?: string[] }) {
+	if (!descriptions || descriptions.length < 1) return null;
+	return (
+		<ul className={'list-inside list-disc pl-2'}>
+			{descriptions.map((description, index) => (
+				<li key={index} className=" text-pretty text-md">
+					{description}
+				</li>
+			))}
+		</ul>
+	);
+}
 
 function processCodeDiff(
 	before: string,
@@ -139,14 +155,10 @@ export function CodeReviewComparison({
 	if (isLoading) {
 		return (
 			<div className="w-full space-y-4">
-				{title && (
+				{(title || descriptions) && (
 					<div className="space-y-2">
-						<h3 className="text-balance text-xl font-semibold">{title}</h3>
-						{descriptions?.length && (
-							<p className="text-muted-foreground text-pretty whitespace-pre-line text-sm">
-								{descriptions.join('\n')}
-							</p>
-						)}
+						<Title text={title} />
+						<Description descriptions={descriptions} />
 					</div>
 				)}
 				<div className="flex items-center justify-center p-12">
@@ -158,14 +170,10 @@ export function CodeReviewComparison({
 
 	return (
 		<div className="w-full space-y-4">
-			{title && (
+			{(title || descriptions) && (
 				<div className="space-y-2">
-					<h3 className="text-balance text-xl font-semibold">{title}</h3>
-					{descriptions?.length && (
-						<p className="text-muted-foreground text-pretty whitespace-pre-line text-sm">
-							{descriptions.join('\n')}
-						</p>
-					)}
+					<Title text={title} />
+					<Description descriptions={descriptions} />
 				</div>
 			)}
 
