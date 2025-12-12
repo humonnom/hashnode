@@ -4,13 +4,14 @@ import { CodeReviewComparison } from '@/components/code-review-comparison';
 
 export default function NamingConventionPage() {
 	return (
-		<div className="container mx-auto max-w-6xl space-y-12 px-4 py-12">
+		<div className="container mx-auto max-w-4xl space-y-12 px-4 py-12">
 			<ArticleTitle title={'좋은 코드의 시작, 네이밍 컨벤션'} />
 			<div className="hashnode-content-style">
 				<h2>들어가며</h2>
 				<p className="text-pretty text-md">
 					&quot;좋은 코드는 읽기 쉬운 코드다&quot;라는 말을 들어보셨을 거예요. 그리고 그 읽기 쉬운
 					코드의 가장 기본이 되는 것이 바로 네이밍(이름 짓기)입니다.
+					<br />
 					<br />
 					부트캠프에서 프론트엔드 강사로 일하면서 학생들의 코드를 리뷰하는 일도 하고 있어요.
 					그러면서 초보 개발자들이 가장 자주 실수하는 부분이 바로 &apos;이름 짓기&apos;라는 것을
