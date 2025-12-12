@@ -9,11 +9,12 @@ type Props = {
 	date: string;
 	author: Author;
 	slug: string;
-	commentCount: number;
+	commentCount?: number;
+	isLocal?: boolean;
 };
 
-export const MinimalPostPreview = ({ title, date, slug, commentCount }: Props) => {
-	const postURL = `/${slug}`;
+export const MinimalPostPreview = ({ title, date, slug, commentCount, isLocal }: Props) => {
+	const postURL = isLocal ? `/local/${slug}` : `/${slug}`;
 
 	return (
 		<section className="flex flex-col items-start gap-1">
@@ -24,14 +25,14 @@ export const MinimalPostPreview = ({ title, date, slug, commentCount }: Props) =
 				<Link href={postURL} className="text-sm text-neutral-600 dark:text-neutral-400">
 					<DateFormatter dateString={date} />
 				</Link>
-				{commentCount > 2 && (
-					<>
-						<span>&middot;</span>
-						<Link href={postURL} className="text-sm text-neutral-600 dark:text-neutral-400">
-							{commentCount} comments
-						</Link>
-					</>
-				)}
+				{/*{commentCount && commentCount > 2 && (*/}
+				{/*	<>*/}
+				{/*		<span>&middot;</span>*/}
+				{/*		<Link href={postURL} className="text-sm text-neutral-600 dark:text-neutral-400">*/}
+				{/*			{commentCount} comments*/}
+				{/*		</Link>*/}
+				{/*	</>*/}
+				{/*)}*/}
 			</p>
 		</section>
 	);

@@ -23,17 +23,19 @@ import {
 	PublicationFragment,
 } from '../generated/graphql';
 import OnlineLectureIllustration from "../components/resume/online-lecture-illustration";
+import { getLocalPosts } from '../lib/markdown';
+import { mergeAndSortPosts, UnifiedPost } from '../lib/post-types';
 
 const GQL_ENDPOINT = process.env.NEXT_PUBLIC_HASHNODE_GQL_ENDPOINT;
 
 type Props = {
 	publication: PublicationFragment;
-	initialPosts: PostFragment[];
+	initialPosts: UnifiedPost[];
 	initialPageInfo: PageInfoFragment;
 };
 
 export default function Index({ publication, initialPosts, initialPageInfo }: Props) {
-	const [posts, setPosts] = useState<PostFragment[]>(initialPosts);
+	const [posts, setPosts] = useState<UnifiedPost[]>(initialPosts);
 	const [pageInfo, setPageInfo] = useState<Props['initialPageInfo']>(initialPageInfo);
 	const [loadedMore, setLoadedMore] = useState(false);
 
@@ -50,8 +52,17 @@ export default function Index({ publication, initialPosts, initialPageInfo }: Pr
 		if (!data.publication) {
 			return;
 		}
-		const newPosts = data.publication.posts.edges.map((edge) => edge.node);
-		setPosts([...posts, ...newPosts]);
+		const newApiPosts = data.publication.posts.edges.map((edge) => edge.node);
+		const newUnifiedPosts = newApiPosts.map((post) => ({
+			id: post.id,
+			slug: post.slug,
+			title: post.title,
+			publishedAt: post.publishedAt,
+			author: { name: post.author.name },
+			commentCount: post.comments?.totalDocuments,
+			isLocal: false as const,
+		}));
+		setPosts([...posts, ...newUnifiedPosts]);
 		setPageInfo(data.publication.posts.pageInfo);
 		setLoadedMore(true);
 	};
@@ -120,12 +131,14 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 			notFound: true,
 		};
 	}
-	const initialPosts = (publication.posts.edges ?? []).map((edge) => edge.node);
+	const apiPosts = (publication.posts.edges ?? []).map((edge) => edge.node);
+	const localPosts = getLocalPosts();
+	const mergedPosts = mergeAndSortPosts(apiPosts, localPosts);
 
 	return {
 		props: {
 			publication,
-			initialPosts,
+			initialPosts: mergedPosts,
 			initialPageInfo: publication.posts.pageInfo,
 		},
 		revalidate: 1,

@@ -1,8 +1,8 @@
-import { PostFragment } from '../generated/graphql';
+import { UnifiedPost } from '../lib/post-types';
 import { MinimalPostPreview } from './minimal-post-preview';
 
 type Props = {
-	posts: PostFragment[];
+	posts: UnifiedPost[];
 	context: 'home' | 'series' | 'tag';
 };
 
@@ -18,7 +18,8 @@ export const MinimalPosts = ({ posts }: Props) => {
 						name: post.author.name,
 					}}
 					slug={post.slug}
-					commentCount={post.comments?.totalDocuments}
+					commentCount={post.commentCount}
+					isLocal={post.isLocal}
 				/>
 			))}
 		</section>
