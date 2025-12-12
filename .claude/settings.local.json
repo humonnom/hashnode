@@ -9,7 +9,11 @@
       "Bash(mkdir:*)",
       "Bash(for num in 60 40 71 42 63 67 48 69 44 65 46 7 89)",
       "Bash(do curl -s -o \"$num.png\" \"https://avatar.iran.liara.run/public/$num\")",
-      "Bash(done)"
+      "Bash(done)",
+      "Bash(npx --yes shadcn@latest init:*)",
+      "Bash(npx --yes shadcn@latest add:*)",
+      "WebFetch(domain:github.com)",
+      "Bash(gh api:*)"
     ],
     "deny": [],
     "ask": []
