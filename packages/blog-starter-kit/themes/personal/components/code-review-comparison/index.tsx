@@ -27,10 +27,10 @@ function Title({ text }: { text?: string }) {
 function Description({ descriptions }: { descriptions?: string[] }) {
 	if (!descriptions || descriptions.length < 1) return null;
 	return (
-		<ul className={'list-inside list-disc pl-2'}>
+		<ul>
 			{descriptions.map((description, index) => (
 				<li key={index} className=" text-pretty text-md">
-					{description}
+					❎ {description}
 				</li>
 			))}
 		</ul>

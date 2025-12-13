@@ -1,6 +1,32 @@
 'use client';
 import ArticleTitle from '@/components/article/title';
 import { CodeReviewComparison } from '@/components/code-review-comparison';
+import { ReactElement, ReactNode } from 'react';
+
+const CodeChangesExplanation = ({ children }: { children: ReactNode }) => {
+	return (
+		<div className={'hashnode-content-style'}>
+			<h3>핵심 원칙 </h3>
+			{children}
+			<hr />
+		</div>
+	);
+};
+
+const BulletList = ({
+	children,
+}: {
+	children:
+		| ReactElement<{ children: ReactNode }, 'p'>
+		| ReactElement<{ children: ReactNode }, 'p'>[];
+}) => {
+	const isArray = Array.isArray(children);
+	return (
+		<ul className={'hashnode-content-style list-disc pl-5'}>
+			{isArray ? children.map((child, index) => <li key={index}>{child}</li>) : <li>{children}</li>}
+		</ul>
+	);
+};
 
 export default function NamingConventionPage() {
 	return (
@@ -40,10 +66,12 @@ export default function NamingConventionPage() {
 <a href="/index.html" alt="로고" class="mobile_logo"></a>`}
 				language="html"
 			/>
-			<p className={'hashnode-content-style'}>
-				<code>mb_logo</code>에서 <code>mb</code>가 mobile인지, main banner인지 바로 이해하기
-				어렵습니다.
-			</p>
+			<BulletList>
+				<p>
+					<code>mb_logo</code>에서 <code>mb</code>가 mobile인지, main banner인지 바로 이해하기
+					어렵습니다.
+				</p>
+			</BulletList>
 			<CodeReviewComparison
 				title="단축어는 지양하세요2"
 				// descriptions={['bn이 의미하는 바가 무엇인지 한눈에 알기 어렵습니다 (banner? button?)']}
@@ -57,11 +85,13 @@ export default function NamingConventionPage() {
 }`}
 				language="html"
 			/>
-			<p className={'hashnode-content-style'}>
-				<code>bn</code>이 의미하는 바가 무엇인지 한눈에 알기 어렵습니다 (banner? button?)
-			</p>
-			<div className={'hashnode-content-style'}>
-				<h3>핵심 원칙 </h3>
+			<BulletList>
+				<p>
+					<code>bn</code>이 의미하는 바가 무엇인지 한눈에 알기 어렵습니다 (banner? button?)
+				</p>
+			</BulletList>
+			<CodeChangesExplanation>
+				{/*<h3>핵심 원칙 </h3>*/}
 				<blockquote>
 					&quot;일반적으로 매우 긴 단어가 아니면 줄여쓰지 않는 게 더 이득입니다. 한눈에 알 수 있기
 					때문이죠.&quot;
@@ -71,27 +101,25 @@ export default function NamingConventionPage() {
 					<strong>예외: </strong>그런데 업계에서 널리 사용되는 약어도 있죠. 이런 약어는 사용해도
 					됩니다.
 				</p>
-				<ul>
-					<li>
+				<BulletList>
+					<p>
 						<code>btn</code> (button)
-					</li>
-					<li>
+					</p>
+					<p>
 						<code>img</code> (image)
-					</li>
-					<li>
+					</p>
+					<p>
 						<code>nav</code> (navigation)
-					</li>
-				</ul>
-				<code>button</code>, <code>image</code>처럼 전체 단어를 쓸지 약어를 사용할지는 팀에서 정해진
-				컨벤션이 있다면 그것을 따르면 됩니다.
-				<hr />
-			</div>
+					</p>
+				</BulletList>
+				<p>
+					명확하게 <code>button</code>, <code>image</code>로 쓸지 약어를 사용할지 정해진 팀의
+					컨벤션이 있다면 따르면 됩니다.
+				</p>
+			</CodeChangesExplanation>
 			<CodeReviewComparison
 				title="의미를 알 수 있는 이름으로 짓기"
-				descriptions={[
-					`❌ 문제점: but이 무슨 뜻인지 알 수 없습니다. v2는 보통 버전을 의미하는데, v1이 없는 상황에서 사용되어 혼란스럽습니다. section_banner_02에 단순히 숫자로 표현되어 있어 어떤 스타일을 담고 있는지 유추가 되지 않습니다.`,
-					`✅ 개선: 클래스 이름만 보고도 그것이 무엇을 나타내는지 명확해야 합니다. 만약 여러분이 작성한 이름을 동료가 보고 "이 변수 이름 어떤 의미인가요?"라고 물어보는 일이 잦다면, 좋은 이름이 아니어서 그럴 수 있습니다.`,
-				]}
+				descriptions={['혼란을 주는 키워드 사용', '단순 숫자 사용']}
 				before={`<div class="login_v2_but">
   <p>간편 로그인하기</p>
 </div>
@@ -104,13 +132,28 @@ export default function NamingConventionPage() {
 <section class="section section_banner section_bottom">`}
 				language="html"
 			/>
-			{/* 3. 가변적 특성이 아니라 핵심 특성을 드러내기 */}
+			<BulletList>
+				<p>
+					<code>but</code>이 무슨 뜻인지 알 수 없습니다
+				</p>
+				<p>
+					<code>v2</code>는 보통 버전을 의미하는데, v1이 없는 상황에서 사용되어 혼란스럽습니다
+				</p>
+				<p>
+					<code>section_banner_02</code>에 단순히 숫자로 표현되어 있어 어떤 스타일을 담고 있는지
+					유추가 되지 않습니다
+				</p>
+			</BulletList>
+			<CodeChangesExplanation>
+				클래스 이름만 보고도 그것이 무엇을 나타내는지 명확히 알 수 있어야 합니다.
+				<br />
+				<br />
+				만약 여러분이 작성한 이름에 대해 &quot;이 변수 이름 어떤 의미인가요?&quot;라고 자주 질문을
+				받는다면, 내가 식별자 이름을 잘 짓고 있는지 점검해볼 필요가 있습니다.
+			</CodeChangesExplanation>
 			<CodeReviewComparison
-				title="3. 가변적 특성이 아니라 핵심 특성을 드러내기"
-				descriptions={[
-					`❌ 문제점: second는 단순히 두 번째라는 순서를 나타낼 뿐입니다. 만약 나중에 순서가 바뀌거나, 세 번째 요소가 같은 스타일을 필요로 한다면 이름이 무의미해집니다.`,
-					`✅ 개선: 해당 스타일은 섹션들 중에 두번째 섹션만 디자인이 반대로 되어있어 필요한 스타일입니다. 그러므로 의미적으로 좌우가 반대라는 것을 알 수 있도록 클래스 이름을 지어줍니다. 순서보다는 역할을, 위치보다는 목적을 나타내세요.`,
-				]}
+				title="3. 가변적 특성이 아니라 핵심특성을 드러내기"
+				descriptions={['화면에 보이는 순서로 이름 짓기']}
 				before={`.second {
   text-align: right;
 }`}
@@ -119,6 +162,23 @@ export default function NamingConventionPage() {
 }`}
 				language="css"
 			/>
+			<BulletList>
+				<p>
+					<code>second</code>는 단순히 두 번째라는 순서를 나타낼 뿐입니다. 만약 나중에 순서가
+					바뀌거나, 세 번째 요소가 같은 스타일을 필요로 한다면 이름이 무의미해집니다.
+				</p>
+				<p>
+					해당 스타일은, 섹션들 중에 두번째 섹션만 디자인이 반대로 되어있어 필요한 스타일입니다.
+					그러므로 의미적으로 좌우가 반대라는 것을 알 수 있도록 클래스 이름을 지어줍니다.
+				</p>
+			</BulletList>
+			<CodeChangesExplanation>
+				<BulletList>
+					<p>순서보다는 역할을 나타내세요</p>
+					<p>위치보다는 목적을 나타내세요</p>
+					<p>변하지 않는 본질적인 특성을 이름에 담으세요</p>
+				</BulletList>
+			</CodeChangesExplanation>
 			{/* 4. 함수 이름은 동사로 짓기 */}
 			<CodeReviewComparison
 				title="4. 함수 이름은 동사로 짓기"
