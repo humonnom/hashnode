@@ -31,6 +31,8 @@ const BulletList = ({
 export default function NamingConventionPage() {
 	return (
 		<div className="container mx-auto max-w-4xl space-y-12 px-4 py-12">
+			<header></header>
+
 			<ArticleTitle title={'좋은 코드의 시작, 네이밍 컨벤션'} />
 			<div className="hashnode-content-style">
 				<h2>들어가며</h2>
@@ -58,7 +60,7 @@ export default function NamingConventionPage() {
 				<hr />
 			</div>
 			<CodeReviewComparison
-				title="단축어는 지양하세요"
+				title="1. 단축어는 지양하세요"
 				// descriptions={['mb_logo에서 mb가 mobile인지, main banner인지 바로 이해하기 어렵습니다.']}
 				before={`<!-- HTML -->
 <a href="/index.html" alt="로고" class="mb_logo"></a>`}
@@ -73,8 +75,6 @@ export default function NamingConventionPage() {
 				</p>
 			</BulletList>
 			<CodeReviewComparison
-				title="단축어는 지양하세요2"
-				// descriptions={['bn이 의미하는 바가 무엇인지 한눈에 알기 어렵습니다 (banner? button?)']}
 				before={`/* CSS */
 .bn {
   background-color: blue;
@@ -118,7 +118,7 @@ export default function NamingConventionPage() {
 				</p>
 			</CodeChangesExplanation>
 			<CodeReviewComparison
-				title="의미를 알 수 있는 이름으로 짓기"
+				title="2. 의미를 알 수 있는 이름으로 짓기"
 				descriptions={['혼란을 주는 키워드 사용', '단순 숫자 사용']}
 				before={`<div class="login_v2_but">
   <p>간편 로그인하기</p>
@@ -179,13 +179,9 @@ export default function NamingConventionPage() {
 					<p>변하지 않는 본질적인 특성을 이름에 담으세요</p>
 				</BulletList>
 			</CodeChangesExplanation>
-			{/* 4. 함수 이름은 동사로 짓기 */}
 			<CodeReviewComparison
-				title="4. 함수 이름은 동사로 짓기"
-				descriptions={[
-					`❌ 문제점: changeIsOpen은 isOpen을 어떻게 바꿀 것인지 불명확합니다. true로? false로? 반전시킬 건가요?`,
-					`✅ 개선: 함수는 동작을 수행하므로 동사로 시작해야 합니다. toggle은 boolean 값을 반전시킨다는 명확한 의미를 전달합니다. 자주 사용하는 동사들: get, set, fetch, load, toggle, handle, update, create, delete`,
-				]}
+				title="4. 함수 이름은 액션이 명확하게 드러나도록 짓기"
+				descriptions={["open 상태를 '어떻게' 변경할 지 명확하지 않습니다."]}
 				before={`const changeIsOpen = () => {
   setIsOpen(!isOpen);
 }`}
@@ -194,26 +190,52 @@ export default function NamingConventionPage() {
 }`}
 				language="javascript"
 			/>
-			{/* 5. Boolean 타입 변수는 질문 형태로 */}
+			<CodeChangesExplanation>
+				<BulletList>
+					<p>
+						<code>changeIsOpen</code>은 isOpen을 어떻게 바꿀 것인지 불명확합니다. true로? false로?
+						반전시킬 건가요?
+					</p>
+					<p>
+						함수는 동작을 수행하므로 동사로 시작해야 합니다. toggle은 boolean 값을 반전시킨다는
+						명확한 의미를 전달합니다.
+					</p>
+					<p>자주 사용하는 동사들: get, set, fetch, load, toggle, handle, update, create, delete</p>
+				</BulletList>
+			</CodeChangesExplanation>
 			<CodeReviewComparison
 				title="5. Boolean 타입 변수는 질문 형태로"
-				descriptions={[
-					`❌ 문제점: open과 visible만으로는 boolean 타입임을 명확히 알기 어렵고, 의미가 모호할 수 있습니다.`,
-					`✅ 개선: boolean 변수는 is, has, should 등의 접두사를 붙여 예/아니오로 답할 수 있는 질문 형태로 만드세요. 예시: isLoading, hasError, shouldUpdate, canSubmit`,
-				]}
 				before={`const open = true;
 const visible = false;`}
 				after={`const isOpen = true;
 const isVisible = false;`}
 				language="javascript"
 			/>
-			{/* 6. DOM 요소를 담는 변수 네이밍 */}
+			<CodeChangesExplanation>
+				<p>
+					boolean 변수는 <code>is</code>, <code>has</code>, <code>should</code> 등의 접두사를 붙여
+					예/아니오로 답할 수 있는 질문 형태로 만드세요.
+				</p>
+				<p>
+					<strong>예시:</strong>
+				</p>
+				<BulletList>
+					<p>
+						<code>isLoading</code> - 로딩 중인가?
+					</p>
+					<p>
+						<code>hasError</code> - 에러가 있는가?
+					</p>
+					<p>
+						<code>shouldUpdate</code> - 업데이트해야 하는가?
+					</p>
+					<p>
+						<code>canSubmit</code> - 제출할 수 있는가?
+					</p>
+				</BulletList>
+			</CodeChangesExplanation>
 			<CodeReviewComparison
 				title="6. DOM 요소를 담는 변수 네이밍"
-				descriptions={[
-					`❌ 문제점: 변수명만으로는 이것이 DOM 요소인지, 일반 데이터인지 구분하기 어렵습니다.`,
-					`✅ 개선: DOM 요소를 변수에 담을 때는 요소의 타입을 명확히 드러내세요. 이렇게 하면 해당 변수가 DOM 요소라는 것을 한눈에 알 수 있습니다.`,
-				]}
 				before={`const login = document.querySelector('.login-button');
 const userName = document.querySelector('#user-name');
 const modal = document.querySelector('.modal');`}
@@ -222,13 +244,14 @@ const userNameInput = document.querySelector('#user-name');
 const modalElement = document.querySelector('.modal');`}
 				language="javascript"
 			/>
-			{/* 7. 파일 이름 작성하기 */}
+			<CodeChangesExplanation>
+				<p>
+					DOM 요소를 변수에 담을 때는 요소의 타입을 명확히 드러내세요. 이렇게 하면 해당 변수가 DOM
+					요소라는 것을 한눈에 알 수 있습니다.
+				</p>
+			</CodeChangesExplanation>
 			<CodeReviewComparison
 				title="7. 파일 이름 작성하기"
-				descriptions={[
-					`❌ 문제점: 대소문자가 섞여 있습니다. 케이스가 통일되지 않았습니다 (snake_case와 camelCase 혼재). Mo가 Mobile을 의미하는지 바로 알기 어렵습니다. Pc보다는 Desktop이 Mobile과 더 자연스러운 쌍입니다.`,
-					`✅ 개선: 파일명은 소문자로 시작하는 것이 일반적입니다. kebab-case 또는 snake_case 중 하나를 선택해 일관되게 사용하세요. 프로젝트 전체에서 같은 규칙을 따르는 것이 중요합니다.`,
-				]}
 				before={`Img_home_bottom.png
 ic_facebook.png
 dropdownMoIcon.svg
@@ -236,22 +259,60 @@ dropdownPcIcon.svg`}
 				after={`img-home-bottom.png
 ic-facebook.png
 dropdown-mobile-icon.svg
-dropdown-desktop-icon.svg
-
-// 또는 snake_case 사용
-img_home_bottom.png
-ic_facebook.png
-dropdown_mobile_icon.svg
-dropdown_desktop_icon.svg`}
+dropdown-desktop-icon.svg`}
 				language="typescript"
 			/>
-			{/* 8. 함수 이름은 camelCase로 */}
+			<BulletList>
+				<p>
+					<code>Img_home_bottom.png</code>,<code>ic_facebook.png</code>
+				</p>
+				<p>❎ 대소문자가 섞여 있습니다</p>
+				<p>
+					<code>ic_facebook.png</code>(snake_case),<code>dropdownMoIcon.svg</code>(camelCase)
+				</p>
+				<p>➡️ 케이스가 통일되지 않았습니다</p>
+				<p>
+					<code>dropdownMoIcon.svg</code>
+				</p>
+				<p>
+					➡️ <code>Mo</code>가 Mobile을 의미하는지 바로 알기 어렵습니다
+				</p>
+				<p>
+					<code>dropdownMoIcon.svg</code>, <code>dropdownPcIcon.svg</code>
+				</p>
+				<p>
+					➡️ <code>Pc</code>보다는 <code>Desktop</code>이 <code>Mobile</code>과 더 자연스러운
+					쌍입니다
+				</p>
+			</BulletList>
+			<CodeChangesExplanation>
+				<h4>1. 소문자로 시작하기</h4>
+				<BulletList>
+					<p>파일명은 소문자로 시작하는 것이 일반적입니다</p>
+				</BulletList>
+				<h4>2. 케이스 통일하기</h4>
+				<BulletList>
+					<p>
+						kebab-case 또는 snake_case 중 하나를 선택해 일관되게 사용하세요. 프로젝트 전체에서 같은
+						규칙을 따르는 것이 중요합니다.
+					</p>
+				</BulletList>
+				<h4>3. 명확한 단어 사용</h4>
+				<BulletList>
+					<p>
+						<code>Mo</code> → <code>mobile</code>
+					</p>
+					<p>
+						<code>Pc</code> → <code>desktop</code>
+					</p>
+					<p>
+						짧게 쓰고 싶다면: <code>sm</code> (small), <code>md</code>(medium) 같은 사이즈 축을
+						사용할 수도 있습니다.
+					</p>
+				</BulletList>
+			</CodeChangesExplanation>
 			<CodeReviewComparison
 				title="8. 함수 이름은 camelCase로"
-				descriptions={[
-					`❌ 문제점: Load_Products는 PascalCase와 snake_case가 혼합된 형태로, JavaScript 네이밍 컨벤션을 따르지 않습니다.`,
-					`✅ 개선: JavaScript에서 함수와 변수는 camelCase를 사용하는 것이 일반적인 컨벤션입니다. camelCase: 변수, 함수 / PascalCase: 컴포넌트, 클래스 / UPPER_SNAKE_CASE: 상수 / kebab-case: CSS 클래스, 파일명`,
-				]}
 				before={`function Load_Products() {
   // ...
 }`}
@@ -260,13 +321,30 @@ dropdown_desktop_icon.svg`}
 }`}
 				language="javascript"
 			/>
-			{/* 9. 오타 주의하기 */}
+			<CodeChangesExplanation>
+				<p>JavaScript에서 함수와 변수는 camelCase를 사용하는 것이 일반적인 컨벤션입니다.</p>
+				<p>
+					<strong>네이밍 케이스 정리:</strong>
+				</p>
+				<BulletList>
+					<p>
+						<strong>camelCase</strong>: 변수, 함수 → <code>userName</code>, <code>getUserData</code>
+					</p>
+					<p>
+						<strong>PascalCase</strong>: 컴포넌트, 클래스 → <code>UserProfile</code>,{' '}
+						<code>Button</code>
+					</p>
+					<p>
+						<strong>UPPER_SNAKE_CASE</strong>: 상수 → <code>MAX_COUNT</code>, <code>API_URL</code>
+					</p>
+					<p>
+						<strong>kebab-case</strong>: CSS 클래스, 파일명 → <code>user-profile</code>,{' '}
+						<code>main-header</code>
+					</p>
+				</BulletList>
+			</CodeChangesExplanation>
 			<CodeReviewComparison
 				title="9. 오타 주의하기"
-				descriptions={[
-					`❌ 문제점: loadProducs는 Products의 오타입니다. 오타는 자동완성이나 디버깅을 어렵게 만듭니다.`,
-					`✅ 개선: VSCode 같은 에디터의 자동 완성 기능을 적극 활용하세요. 오타는 생각보다 자주 발생하고, 찾기 어려운 버그의 원인이 될 수 있습니다.`,
-				]}
 				before={`const loadProducs = async () => {
   // ...
 }`}
@@ -275,44 +353,53 @@ dropdown_desktop_icon.svg`}
 }`}
 				language="javascript"
 			/>
-			{/* 마무리 섹션 */}
-			<div className="space-y-6 rounded-lg border p-8">
-				<h2 className="text-2xl font-bold">네이밍 체크리스트 ✅</h2>
-				<ul className="space-y-3 text-lg">
-					<li>
+			<CodeChangesExplanation>
+				<p>
+					오타는 생각보다 자주 발생하고, 자동완성이나 디버깅을 어렵게 만듭니다. VSCode 같은 에디터의
+					자동 완성 기능을 적극 활용하세요.
+				</p>
+			</CodeChangesExplanation>
+			<div className={'hashnode-content-style'}>
+				<h2>마무리하며</h2>
+				좋은 네이밍은 하루아침에 만들어지지 않습니다. 하지만 다음의 체크리스트를 기억한다면 훨씬
+				나은 코드를 작성할 수 있어요:
+			</div>
+			<div className="hashnode-content-style space-y-6 rounded-lg border p-8">
+				<h3>네이밍 체크리스트 ✅</h3>
+				<BulletList>
+					<p>
 						1. <strong>단축어를 피했는가?</strong> (mb → mobile)
-					</li>
-					<li>
+					</p>
+					<p>
 						2. <strong>의미가 명확한가?</strong> (h_logo → header_logo)
-					</li>
-					<li>
+					</p>
+					<p>
 						3. <strong>본질적 특성을 나타내는가?</strong> (second → reverse)
-					</li>
-					<li>
-						4. <strong>함수는 동사로 시작하는가?</strong> (changeIsOpen → toggleDropdown)
-					</li>
-					<li>
+					</p>
+					<p>
+						4. <strong>함수 이름은 액션이 명확하게 드러나도록 짓기</strong> (changeIsOpen →
+						toggleDropdown)
+					</p>
+					<p>
 						5. <strong>Boolean은 질문 형태인가?</strong> (open → isOpen)
-					</li>
-					<li>
+					</p>
+					<p>
 						6. <strong>케이스가 통일되었는가?</strong> (camelCase, kebab-case 등)
-					</li>
-					<li>
+					</p>
+					<p>
 						7. <strong>오타가 없는가?</strong> (producs → products)
-					</li>
-				</ul>
+					</p>
+				</BulletList>
 				<p className="text-muted-foreground text-lg">
 					기억하세요. 코드는 컴퓨터보다 사람을 위해 작성하는 것입니다. <br />
 					이름을 잘 지으면 여러분의 코드를 읽는 모든 사람(미래의 자신 포함)의 에너지를 아낄 수
 					있어요.
 				</p>
 			</div>
-			{/* 참고 자료 */}
-			<div className="space-y-4 rounded-lg border p-8">
-				<h2 className="text-2xl font-bold">참고 자료</h2>
-				<ul className="text-muted-foreground space-y-2">
-					<li>
-						•{' '}
+			<div className="hashnode-content-style space-y-4 rounded-lg border p-8">
+				<h3>참고 자료</h3>
+				<BulletList>
+					<p>
 						<a
 							href="https://developer.mozilla.org/ko/docs/Glossary/Kebab_case"
 							className="hover:underline"
@@ -321,9 +408,8 @@ dropdown_desktop_icon.svg`}
 						>
 							MDN - Kebab case
 						</a>
-					</li>
-					<li>
-						•{' '}
+					</p>
+					<p>
 						<a
 							href="https://developer.mozilla.org/ko/docs/Glossary/Snake_case"
 							className="hover:underline"
@@ -332,9 +418,8 @@ dropdown_desktop_icon.svg`}
 						>
 							MDN - Snake case
 						</a>
-					</li>
-					<li>
-						•{' '}
+					</p>
+					<p>
 						<a
 							href="https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882"
 							className="hover:underline"
@@ -343,11 +428,13 @@ dropdown_desktop_icon.svg`}
 						>
 							Clean Code by Robert C. Martin
 						</a>
-					</li>
-				</ul>
-				<p className="text-muted-foreground mt-4 italic">
-					이 글은 실제 부트캠프 코드 리뷰 경험을 바탕으로 작성되었습니다. 🚀
-				</p>
+					</p>
+				</BulletList>
+			</div>
+			<div className={'hashnode-content-style'}>
+				<blockquote>
+					<p>이 글은 실제 부트캠프 코드 리뷰 경험을 바탕으로 작성되었습니다. 🚀</p>
+				</blockquote>
 			</div>
 		</div>
 	);

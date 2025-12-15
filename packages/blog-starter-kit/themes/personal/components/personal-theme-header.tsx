@@ -1,6 +1,7 @@
 import * as DropdownMenu from '@radix-ui/react-dropdown-menu';
 import { resizeImage } from '@starter-kit/utils/image';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { PublicationNavbarItem } from '../generated/graphql';
 import { useAppContext } from './contexts/appContext';
 import { ToggleTheme } from './toggle-theme';
@@ -14,6 +15,7 @@ function hasUrl(
 
 export const PersonalHeader = () => {
 	const { publication } = useAppContext();
+	const router = useRouter();
 
 	const navbarItems = publication.preferences.navbarItems.filter(hasUrl);
 	const visibleItems = navbarItems.slice(0, 2);
@@ -64,8 +66,28 @@ export const PersonalHeader = () => {
 	return (
 		<header className="grid grid-cols-2 items-center gap-5 ">
 			<div className="col-span-full md:col-span-1">
-				<div className="flex justify-between">
-					<h1>
+				<div className="flex items-center justify-between gap-3">
+					<button
+						onClick={() => router.back()}
+						className="flex items-center justify-center rounded-lg p-2 text-neutral-600 transition-colors hover:bg-neutral-100 dark:text-neutral-300 dark:hover:bg-neutral-800"
+						aria-label="Go back"
+					>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							fill="none"
+							viewBox="0 0 24 24"
+							strokeWidth={2}
+							stroke="currentColor"
+							className="h-5 w-5"
+						>
+							<path
+								strokeLinecap="round"
+								strokeLinejoin="round"
+								d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"
+							/>
+						</svg>
+					</button>
+					<h1 className="flex-1">
 						<Link
 							className="flex flex-row items-center gap-2 text-lg font-bold leading-tight tracking-tight text-black dark:text-white"
 							href="/"
