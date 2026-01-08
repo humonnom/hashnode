@@ -25,7 +25,7 @@
           "items": [
             "주요 기능: 한일 데이팅 앱",
             "- 다국어 지원(한국어, 일본어)",
-            "- 현재 데모 버전 개발중",
+            "- 데모 버전 개발중",
             "- 모바일 우선 디자인 및 개발"
           ]
         }
@@ -39,7 +39,7 @@
       "productLink": "https://buildtalk.info/",
       "thevcLink": "https://thevc.kr/buildtalk",
       "position": "Frontend Developer",
-      "period": "2024.8 - Present",
+      "period": "2024.8",
       "responsibilities": [
         {
           "category": "빌드톡 | Build Talk 웹사이트 개발",
@@ -52,8 +52,7 @@
         {
           "category": "업무 범위",
           "items": [
-            "주소 입력시 정부 API사용하여 해당 건물 정보 취득",
-            "취득 정보 활용하여 용도변경 가능성 판별",
+            "정부 API를 통해 취득된 정보를 활용하여 용도변경 가능성 판별 로직 작성",
             "판별 결과를 사용자에게 시각적으로 제공"
           ]
         }

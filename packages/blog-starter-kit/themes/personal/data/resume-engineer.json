@@ -1,7 +1,7 @@
 {
   "personal": {
     "intro": "안녕하세요. 프론트엔드 개발자 박주은입니다.",
-    "description": "프론트엔드 엔지니어로서 두 군데의 스타트업에 근무하고 현재는 코드잇에서 프리랜서 강사로 일하고 있습니다.\n\nNext.js에서 제공하는 서버사이드 렌더링 및 API 레퍼런스를 필요에 따라 적절히 활용하며, Typescript로 안정적인 React 코드를 작성할 수 있습니다.\n\n새로운 것을 빠르게 학습하는 것에 자신이 있습니다."
+    "description": "프론트엔드 엔지니어로 스타트업에서 근무한 경험이 있고, 현재는 코드잇에서 프리랜서 강사로 일하고 있습니다.\n\nNext.js에서 제공하는 서버사이드 렌더링 및 API 레퍼런스를 필요에 따라 적절히 활용하며, Typescript로 안정적인 React 코드를 작성할 수 있습니다.\n\n최근 1년간 부트캠프 강사로 활동하며 명확하고 논리적인 커뮤니케이션 역량을 쌓았습니다.\n\n일본 단기 어학연수를 통해 일본어 회화 능력을 갖추었으며, JLPT N2 자격을 바탕으로 업무에서 일본어를 활용한 커뮤니케이션이 가능합니다."
   },
   "employmentEngineer": [
     {
@@ -49,7 +49,7 @@
       "id": "luaeb",
       "company": "뉴스탠다드에프앤씨",
       "companyEn": "New Standard F&C",
-      "website": "https://luaeb.com/",
+      "website": "https://portfolio-2023-three-sable.vercel.app/projects/1",
       "position": "Software Engineer | 소프트웨어 엔지니어",
       "type": "정규직",
       "period": "2022.07 - 2023.08",
