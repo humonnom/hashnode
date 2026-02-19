@@ -37,6 +37,18 @@ export function ResumeHeader({ personal, links }: { personal: PersonalInfo; link
         animate={{ opacity: 1 }}
         transition={{ delay: 0.4, duration: 0.6 }}
       >
+        {personal.birthDate && (
+          <span className="flex items-center gap-2 text-muted-foreground">
+            <Calendar className="w-4 h-4" />
+            {personal.birthDate}
+          </span>
+        )}
+        {personal.address && (
+          <span className="flex items-center gap-2 text-muted-foreground">
+            <MapPin className="w-4 h-4" />
+            {personal.address}
+          </span>
+        )}
         <a
           href={`mailto:${personal.email}`}
           className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
