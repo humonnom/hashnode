@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "motion/react"
-import { Mail, Phone, Github, BookOpen, Linkedin } from "lucide-react"
+import { Mail, Phone, Github, BookOpen, Linkedin, Calendar, MapPin } from "lucide-react"
 import { PersonalInfo, Links } from "./types"
 
 export function ResumeHeader({ personal, links }: { personal: PersonalInfo; links: Links }) {
