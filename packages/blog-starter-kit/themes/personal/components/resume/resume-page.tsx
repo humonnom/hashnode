@@ -13,11 +13,22 @@ export default function ResumePage({
 	type,
 }: {
 	data: ResumeData;
-	type: 'instructor' | 'engineer';
+	type: 'instructor' | 'engineer' | 'sdr';
 }) {
 	const handlePrint = () => {
 		window.print();
 	};
+
+	const employmentDividerLabel =
+		type === 'engineer'
+			? 'Instructor'
+			: type === 'sdr'
+				? 'Previous Engineering Experience'
+				: 'Engineering';
+
+	const skillsSectionTitle = type === 'sdr' ? 'Relevant Skills' : 'Technical Skills';
+	const primarySkillsLabel = type === 'sdr' ? 'Core Competencies' : 'Primary Skills';
+	const additionalSkillsLabel = type === 'sdr' ? 'Supporting Skills' : 'Additional Skills';
 
 	return (
 		<main className="bg-background text-foreground [&_*]:border-border [&_*]:outline-ring/50 min-h-screen">
@@ -25,10 +36,10 @@ export default function ResumePage({
 				<div className="mb-8 flex items-start justify-between">
 					<ResumeHeader personal={data.personal} links={data.links} />
 					<Button
-						label="PDF로 출력"
+						label="PDF 출력"
 						type="outline"
 						onClick={handlePrint}
-						className="hidden md:block print:hidden"
+						className="hidden border-red-500 text-red-600 hover:bg-red-50 hover:text-red-700 dark:border-red-400 dark:text-red-300 dark:hover:bg-red-950/30 md:inline-flex md:w-20 md:px-3 md:py-2 md:text-xs md:leading-tight md:whitespace-normal print:hidden"
 					/>
 				</div>
 
@@ -39,7 +50,7 @@ export default function ResumePage({
 							{data.employmentEngineer.map((job, index) => (
 								<EmploymentCard key={job.id} job={job} index={index} />
 							))}
-							<SectionDivider label="Instructor" />
+							<SectionDivider label={employmentDividerLabel} />
 							{data?.employment.map((job, index) => (
 								<EmploymentCard key={job.id} job={job} index={index} />
 							))}
@@ -49,7 +60,7 @@ export default function ResumePage({
 							{data.employment.map((job, index) => (
 								<EmploymentCard key={job.id} job={job} index={index} />
 							))}
-							<SectionDivider label="Engineering" />
+							<SectionDivider label={employmentDividerLabel} />
 							{data?.employmentEngineer.map((job, index) => (
 								<EmploymentCard key={job.id} job={job} index={index} />
 							))}
@@ -67,8 +78,12 @@ export default function ResumePage({
 				</section>
 
 				<section className="mb-12">
-					<SectionTitle>Technical Skills</SectionTitle>
-					<SkillsSection skills={data.skills} />
+					<SectionTitle>{skillsSectionTitle}</SectionTitle>
+					<SkillsSection
+						skills={data.skills}
+						primaryLabel={primarySkillsLabel}
+						additionalLabel={additionalSkillsLabel}
+					/>
 				</section>
 
 				<section className="mb-12">

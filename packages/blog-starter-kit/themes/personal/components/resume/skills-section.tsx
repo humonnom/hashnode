@@ -3,7 +3,15 @@
 import { motion } from "motion/react"
 import { Skills } from "./types"
 
-export function SkillsSection({ skills }: { skills: Skills }) {
+export function SkillsSection({
+  skills,
+  primaryLabel = "Primary Skills",
+  additionalLabel = "Additional Skills",
+}: {
+  skills: Skills
+  primaryLabel?: string
+  additionalLabel?: string
+}) {
   return (
     <motion.div
       className="space-y-4"
@@ -13,7 +21,7 @@ export function SkillsSection({ skills }: { skills: Skills }) {
       transition={{ duration: 0.5 }}
     >
       <div>
-        <p className="text-sm font-medium text-muted-foreground mb-3">Primary Skills</p>
+        <p className="text-sm font-medium text-muted-foreground mb-3">{primaryLabel}</p>
         <div className="flex flex-wrap gap-3">
           {skills.primary.map((skill, idx) => (
             <motion.span
@@ -32,7 +40,7 @@ export function SkillsSection({ skills }: { skills: Skills }) {
       </div>
 
       <div>
-        <p className="text-sm font-medium text-muted-foreground mb-3">Additional Skills</p>
+        <p className="text-sm font-medium text-muted-foreground mb-3">{additionalLabel}</p>
         <div className="flex flex-wrap gap-2">
           {skills.additional.map((skill, idx) => (
             <motion.span
