@@ -2,6 +2,8 @@ export interface PersonalInfo {
 	name: string;
 	nameKo: string;
 	title: string;
+	birthDate?: string;
+	address?: string;
 	email: string;
 	phone: string;
 	intro: string;
